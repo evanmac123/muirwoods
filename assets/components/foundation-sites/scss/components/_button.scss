@@ -53,7 +53,7 @@ $button-sizes: (
 
 /// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
 /// @type Map
-$button-palette: $foundation-palette !default;
+$button-palette: $theme-palette !default;
 
 /// opacity for a disabled button.
 /// @type List

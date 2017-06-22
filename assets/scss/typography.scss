@@ -1,0 +1,59 @@
+h1{
+  text-transform: uppercase;
+}
+
+h2,h3,h4,h5,h6{
+  color:$light-gray;
+}
+
+blockquote{
+  color:$primary-color;
+  font-style: italic;
+  font-weight: 300;
+  font-size:1.9em;
+}
+
+//for all bolded statments
+.type__callout, bold, .bold{
+  font-weight:bold;
+  color:$dark-gray;
+}
+
+p a{
+  position: relative;
+  display: inline-block;
+  @include underline;
+  color:$primary-color;
+  cursor:pointer;
+  //transition: opacity 0.35s;
+  }
+
+  a:hover {
+    &:after{
+
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+}
+
+.no-underline{
+  &:hover{
+    opacity:.9;
+  }
+  &:after{
+    display:none;
+  }
+}
+
+ul li {
+    color: black;
+    list-style-type: none;
+}
+
+ul li:before {
+    color: $primary-color;
+    float: left;
+    margin: 0 0 0 -1em;
+    width: 1em;
+    content: '\25AA';
+}

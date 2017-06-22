@@ -55,5 +55,13 @@ require_once( 'library/sticky-posts.php' );
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
 
+if ( ! function_exists( 'wpforge_google_fonts' ) ) {
+    function wpforge_google_fonts() {
+        // register the font styles we want
+        wp_enqueue_style('wpforge-opensans', '//fonts.googleapis.com/css?family=Open+Sans:300,700','', '6.2');
+    }
+    add_action( 'wp_enqueue_scripts', 'wpforge_google_fonts', 0);
+}
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );

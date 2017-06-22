@@ -20,7 +20,7 @@ $label-color-alt: $black !default;
 
 /// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
 /// @type Map
-$label-palette: $foundation-palette !default;
+$label-palette: $theme-palette !default;
 
 /// Default font size for labels.
 /// @type Number

@@ -22,7 +22,7 @@ $global-lineheight: 1.5 !default;
 
 /// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
 /// @type Map
-$foundation-palette: (
+$theme-palette: (
   primary: #1779ba,
   secondary: #767676,
   success: #3adb76,
@@ -94,8 +94,8 @@ $global-text-direction: ltr !default;
 /// @type Boolean
 $global-flexbox: false !default;
 
-@if not map-has-key($foundation-palette, primary) {
-  @error 'In $foundation-palette, you must have a color named "primary".';
+@if not map-has-key($theme-palette, primary) {
+  @error 'In $theme-palette, you must have a color named "primary".';
 }
 
 // Internal variables used for text direction
