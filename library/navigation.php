@@ -9,6 +9,7 @@
 
 register_nav_menus( array(
 	'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
+	'program-bar-r'  => esc_html__( 'Right Program Bar', 'foundationpress' ),
 	'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
 ));
 
@@ -28,6 +29,25 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 			'depth'          => 3,
 			'fallback_cb'    => false,
 			'walker'         => new Foundationpress_Top_Bar_Walker(),
+		));
+	}
+}
+
+/**
+ * Desktop navigation - right program bar
+ *
+ * @link http://codex.wordpress.org/Function_Reference/wp_nav_menu
+ */
+if ( ! function_exists( 'foundationpress_program_bar_r' ) ) {
+	function foundationpress_program_bar_r() {
+		wp_nav_menu( array(
+			'container'      => false,
+			'menu_class'     => 'dropdown menu',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'theme_location' => 'program-bar-r',
+					'depth'          => 3,
+			'fallback_cb'    => false,
+			'walker'         => new Foundationpress_Program_Bar_Walker(),
 		));
 	}
 }

@@ -29,6 +29,7 @@ require_once( 'library/navigation.php' );
 /** Add menu walkers for top-bar and off-canvas */
 require_once( 'library/class-foundationpress-top-bar-walker.php' );
 require_once( 'library/class-foundationpress-mobile-walker.php' );
+require_once( 'library/class-foundationpress-program-bar-walker.php' );
 
 /** Create widget areas in sidebar and footer */
 require_once( 'library/widget-areas.php' );
@@ -38,6 +39,9 @@ require_once( 'library/entry-meta.php' );
 
 /** Enqueue scripts */
 require_once( 'library/enqueue-scripts.php' );
+
+/** Custom Post Type:Staff */
+require_once( 'library/custom-post-types.php' );
 
 /** Add theme support */
 require_once( 'library/theme-support.php' );
