@@ -11,6 +11,8 @@ register_nav_menus( array(
 	'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
 	'program-bar-r'  => esc_html__( 'Right Program Bar', 'foundationpress' ),
 	'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
+	'bottom-nav' => esc_html__( 'Bottom', 'foundationpress' ),
+	'left-nav' => esc_html__( 'Left', 'foundationpress' ),
 ));
 
 
@@ -32,6 +34,32 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 		));
 	}
 }
+
+if ( ! function_exists( 'foundationpress_bottom_nav' ) ) {
+	function foundationpress_bottom_nav() {
+		wp_nav_menu( array(
+						'theme_location' => 'bottom-nav',
+						'walker' => new Foundationpress_Sub_Menu_Bottom_Walker(),
+						'depth'          => 2,
+						'menu_id'     => 'bottom-menu',
+						'menu_class' => 'large-centered'
+				));
+			}
+}
+
+if ( ! function_exists( 'foundationpress_left_nav' ) ) {
+	function foundationpress_left_nav() {
+		wp_nav_menu( array(
+						'theme_location' => 'left-nav',
+						'walker' => new Foundationpress_Sub_Menu_Left_Walker(),
+						'depth'          => 3,
+						'menu_id'     => 'side-menu',
+				));
+			}
+}
+
+
+
 
 /**
  * Desktop navigation - right program bar

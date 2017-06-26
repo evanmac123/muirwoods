@@ -30,6 +30,8 @@ require_once( 'library/navigation.php' );
 require_once( 'library/class-foundationpress-top-bar-walker.php' );
 require_once( 'library/class-foundationpress-mobile-walker.php' );
 require_once( 'library/class-foundationpress-program-bar-walker.php' );
+require_once( 'library/class-foundationpress-sub-menu-left-walker.php' );
+require_once( 'library/class-foundationpress-sub-menu-bottom-walker.php' );
 
 /** Create widget areas in sidebar and footer */
 require_once( 'library/widget-areas.php' );
@@ -55,13 +57,25 @@ require_once( 'library/sticky-posts.php' );
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
 
-if ( ! function_exists( 'wpforge_google_fonts' ) ) {
-    function wpforge_google_fonts() {
-        // register the font styles we want
-        wp_enqueue_style('wpforge-opensans', '//fonts.googleapis.com/css?family=Open+Sans:300,700','', '6.2');
+add_filter("wp_nav_menu_objects",'my_wp_nav_menu_objects_start_in',10,2);
+function my_wp_nav_menu_objects_start_in( $sorted_menu_items, $args ) {
+    if (isset($args->start_in) && $args->start_in != 0) {
+        $menu_item_parents = array();
+        foreach ($sorted_menu_items as $key => $item) {
+            if ($item->object_id == (int)$args->start_in) $menu_item_parents[] = $item->ID;
+            if (in_array($item->menu_item_parent, $menu_item_parents)) {
+                $menu_item_parents[] = $item->ID;
+            } else {
+                unset($sorted_menu_items[$key]);
+            }
+        }
+        return $sorted_menu_items;
+    } else {
+        return $sorted_menu_items;
     }
-    add_action( 'wp_enqueue_scripts', 'wpforge_google_fonts', 0);
 }
+
+
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );

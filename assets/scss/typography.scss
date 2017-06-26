@@ -6,6 +6,10 @@ h2,h3,h4,h5,h6{
   color:$light-gray;
 }
 
+.sidebar-left .row{ //subtitle
+  margin-top:2em;
+}
+
 blockquote{
   color:$primary-color;
   font-style: italic;
@@ -16,7 +20,7 @@ blockquote{
 //for all bolded statments
 .type__callout, bold, .bold{
   font-weight:bold;
-  color:$dark-gray;
+  color:$medium-gray;
 }
 
 p a{
@@ -46,7 +50,6 @@ p a{
 }
 
 ul li {
-    color: black;
     list-style-type: none;
 }
 

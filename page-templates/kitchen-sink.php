@@ -43,6 +43,9 @@ get_header(); ?>
 						<li>Example 4</li>
 						<li>Example 5</li>
 					</ol>
+
+					<bold> You can do a call out this way </bold>
+					<div class="bold">Or like this</div>
 					<!-- Abide -->
 					<h2 id="abide" class="docs-heading" data-magellan-target="abide"><a href="abide"></a>Abide</h2>
 					<form data-abide novalidate>

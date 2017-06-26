@@ -109,8 +109,8 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-light;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: $dark-gray;
-$header-lineheight: 1.4;
+$header-color: $medium-gray;
+$header-lineheight: 1.2;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
@@ -176,7 +176,7 @@ $abbr-underline: 1px dotted $black;
 
 $lead-font-size: $global-font-size * 1.25;
 $lead-lineheight: 1.6;
-$subheader-lineheight: 1.4;
+$subheader-lineheight: 1.1;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
@@ -413,8 +413,8 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-color-active: $primary-color;
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 $menu-item-background-hover: $light-gray;
 $menu-border: $light-gray;
