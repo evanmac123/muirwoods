@@ -9,10 +9,7 @@ li {
 
 #side-menu {
   .menu-item {
-    font-size: 0.9em;
-    font-weight: 400;
-    border-bottom: 1px $secondary-color solid;
-    line-height: 2.3em;
+    @include menu-item;
   }
 
 

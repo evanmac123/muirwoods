@@ -1,0 +1,129 @@
+.site-navigation{
+  color:$medium-gray;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  top: 0;
+}
+
+  .top-bar-r{
+    font-size:.8em;
+    float: right;
+
+    .current_page_item a{
+         color:$primary-color;
+         @include underline;
+         position: relative;
+         display: inline-block;
+         &:after{
+           transform-origin: right;
+           transform: scaleX(1);
+         }
+     }
+      li{
+        &:before{
+          color: $secondary-color;
+          float: left;
+          margin: 7px 0 0 0em;
+          width: 1em;
+          content: '\25AA';
+          display: inline-block;
+        }
+
+        a{
+          position: relative;
+          display: inline-block;
+          @include underline;
+          cursor:pointer;
+          &:hover {
+              &:after{
+              transform-origin: right;
+              transform: scaleX(1);
+            }
+          }
+        }
+
+        &:first-child:before{
+          display:none;
+        }
+      }
+  }
+
+  body nav .program-bar-r{
+    li:hover ul{
+      display:block;
+    }
+
+
+    li ul{
+      display:none;
+    }
+
+    li:first-child ul {
+      display:block;
+      top: 150px;
+      right: auto;
+      left: auto;
+      float: left;
+      width: 100%;
+      position: fixed;
+      padding:40px;
+      background-color: $primary-color;
+      color: $white;
+      z-index:3;
+      margin-left:0;
+      background-image: url(../images/menu.jpg);
+        .sub-menu-label{
+          @include grid-column(5);
+          float:left;
+          .sub-menu-title{
+            font-size: 1.2em;
+            font-weight:300;
+            text-transform: uppercase;
+          }
+          .sub-menu-description{
+            font-size:.9em;
+          }
+        }
+        .sub-menu-items{
+          @include grid-column(3);
+          float:left;
+        }
+        a{
+          color: $white;
+        //  display:inline-block;
+          font-size: 0.8em;
+          font-weight: 400;
+          border-bottom: 1px $secondary-color solid;
+          line-height: 1.2em;
+          width:100%;
+        }
+        ul{
+          top: 219px;
+          margin-left: 170px;
+          position: fixed;
+          padding: 0;
+          background-color: transparent;
+          color: #fefefe;
+          z-index: 3;
+          margin-right: 0;
+          background-image: none;
+          background-color: transparent;
+          float: right;
+          list-style-position: outside;
+
+          .sub-menu-label{
+            display:none;
+          }
+          background-image:none;
+          background-color:transparent;
+          li{
+            a{
+              padding: 0px 10px 10px 0;
+              border-bottom:none;
+              float:left;
+              }
+            }
+          }
+         }
+  }

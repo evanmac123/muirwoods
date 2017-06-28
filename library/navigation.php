@@ -21,19 +21,6 @@ register_nav_menus( array(
  *
  * @link http://codex.wordpress.org/Function_Reference/wp_nav_menu
  */
-if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
-	function foundationpress_top_bar_r() {
-		wp_nav_menu( array(
-			'container'      => false,
-			'menu_class'     => 'dropdown menu',
-			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
-			'theme_location' => 'top-bar-r',
-			'depth'          => 3,
-			'fallback_cb'    => false,
-			'walker'         => new Foundationpress_Top_Bar_Walker(),
-		));
-	}
-}
 
 if ( ! function_exists( 'foundationpress_bottom_nav' ) ) {
 	function foundationpress_bottom_nav() {
@@ -58,8 +45,19 @@ if ( ! function_exists( 'foundationpress_left_nav' ) ) {
 			}
 }
 
-
-
+if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
+	function foundationpress_top_bar_r() {
+		wp_nav_menu( array(
+			'container'      => false,
+			'menu_class'     => 'dropdown menu top-bar-r',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'theme_location' => 'top-bar-r',
+			'depth'          => 3,
+			'fallback_cb'    => false,
+			'walker'         => new Foundationpress_Top_Bar_Walker(),
+		));
+	}
+}
 
 /**
  * Desktop navigation - right program bar
@@ -70,8 +68,8 @@ if ( ! function_exists( 'foundationpress_program_bar_r' ) ) {
 	function foundationpress_program_bar_r() {
 		wp_nav_menu( array(
 			'container'      => false,
-			'menu_class'     => 'dropdown menu',
-			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'menu_class'     => 'dropdown menu program-bar-r',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 			'theme_location' => 'program-bar-r',
 					'depth'          => 3,
 			'fallback_cb'    => false,
