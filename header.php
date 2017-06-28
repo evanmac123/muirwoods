@@ -39,7 +39,14 @@
 		<nav class="site-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php
+						// Display the Custom Logo
+						the_custom_logo();
+						// No Custom Logo, just display the site's name
+						if (!has_custom_logo()) {
+							bloginfo('name');
+						} ?>
 				</div>
 			</div>
 

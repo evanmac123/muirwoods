@@ -2,13 +2,28 @@
   color:$medium-gray;
   position: fixed;
   z-index: 1;
+  top:0;
   background-color: white;
-  top: 0;
-}
+  padding: 30px 0 30px 30px;
+
+ }
+
+  .top-bar-left{
+    float:none;
+    position: fixed;
+    padding: 10px;
+    z-index:5;
+  }
+  .top-bar-right{
+    position: fixed;
+    padding: 10px;
+    top:50px;
+  }
 
   .top-bar-r{
     font-size:.8em;
-    float: right;
+    float:right;
+
 
     .current_page_item a{
          color:$primary-color;
@@ -50,6 +65,65 @@
   }
 
   body nav .program-bar-r{
+    width: 90%;
+    float: right;
+    text-align: right;
+    margin-top:1em;
+
+
+    .green-block{
+      background-color: $primary-color;
+      font-size: .8em;
+      font-weight: 700;
+      width: 150px;
+      float: right;
+      height: 60px;
+      text-align: center;
+      width: 130px;
+      padding: 10px 0;
+      a{
+        color:$white;
+      }
+    }
+
+    .contact{
+      &:after{
+        content:'';
+        width: 20px;
+        height: 20px;
+        position: relative;
+        background-image: url(../images/call.png);
+        display: block;
+        top: -20px;
+        left: 10px;
+        background-size:contain;
+      }
+    }
+    .search{
+      background-image: url(../images/search.png);
+      width:40px;
+      height:40px;
+      padding:5px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .top-level{
+      font-size: .8em;
+      font-weight: 700;
+      width: 150px;
+      float: right;
+      height: 30px;
+      line-height:15px;
+      text-align: center;
+      width: 130px;
+      padding: 10px 0;
+      border-right: 1px solid $secondary-color;
+      a{
+        color:$light-gray;
+      }
+    }
+
     li:hover ul{
       display:block;
     }
@@ -57,13 +131,15 @@
 
     li ul{
       display:none;
+      &:hover{
+       display:block;
+      }
     }
 
-    li:first-child ul {
-      display:block;
-      top: 150px;
+    li:hover ul {
+      top:190px;
       right: auto;
-      left: auto;
+      left: 0;
       float: left;
       width: 100%;
       position: fixed;
@@ -72,6 +148,7 @@
       color: $white;
       z-index:3;
       margin-left:0;
+      text-align:left;
       background-image: url(../images/menu.jpg);
         .sub-menu-label{
           @include grid-column(5);
@@ -83,6 +160,7 @@
           }
           .sub-menu-description{
             font-size:.9em;
+            font-weight:400;
           }
         }
         .sub-menu-items{
@@ -92,10 +170,10 @@
         a{
           color: $white;
         //  display:inline-block;
-          font-size: 0.8em;
+          font-size: 1.1em;
           font-weight: 400;
           border-bottom: 1px $secondary-color solid;
-          line-height: 1.2em;
+          line-height: 1.5em;
           width:100%;
         }
         ul{

@@ -1,9 +1,9 @@
 .main-wrap {
   @include grid-row();
-  margin-top: 1rem;
+  margin-top: 10rem;
 
   @include breakpoint(medium) {
-    margin-top: 3rem;
+    margin-top: 10rem;
   }
 }
 
