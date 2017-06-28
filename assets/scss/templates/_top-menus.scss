@@ -1,6 +1,33 @@
 // main styling for all top right nav
 // construction happens in navigation.php, custom walker classes, and header
 
+
+//mobile-menu
+.title-bar{
+  background-color:$white;
+  color:$white;
+  padding:10px;
+  position:fixed;
+  width:100%;
+
+}
+
+.mobile-off-canvas-menu{
+  margin-top:10px;
+  background-color:$white;
+  li{
+    border-bottom: .1px $light-gray solid;
+  }
+}
+
+
+
+
+//desk-top
+
+
+
+
 .site-navigation {
   color: $medium-gray;
   position: fixed;

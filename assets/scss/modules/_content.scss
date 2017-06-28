@@ -2,8 +2,11 @@
   @include grid-row();
   margin-top: 12rem;
 
-  @include breakpoint(medium) {
+  @include breakpoint(large up) {
     margin-top: $header-top-length;
+  }
+  @include breakpoint(medium down) {
+    margin-top: 0;
   }
 }
 

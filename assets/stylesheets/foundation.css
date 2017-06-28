@@ -7188,14 +7188,14 @@ a.thumbnail {
   My custom styles:
   Add your scss files below to structure your project styles
 */
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: 64em) {
   .mobile-menu,
   .site-title-bar {
     display: none !important; } }
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 63.9375em) {
   .desktop-menu,
-  .site-navigation .top-bar-left {
+  .site-navigation, .top-bar-left {
     display: none !important; } }
 
 .site-desktop-title a {
@@ -7249,9 +7249,12 @@ a.thumbnail {
     content: ' '; }
   .main-wrap::after {
     clear: both; }
-  @media print, screen and (min-width: 40em) {
+  @media screen and (min-width: 64em) {
     .main-wrap {
       margin-top: 200px; } }
+  @media screen and (max-width: 63.9375em) {
+    .main-wrap {
+      margin-top: 0; } }
 
 .main-content {
   width: 100%;
@@ -7882,6 +7885,19 @@ li:before {
     position: absolute;
     right: 2em;
     bottom: 15px; }
+
+.title-bar {
+  background-color: #fefefe;
+  color: #fefefe;
+  padding: 10px;
+  position: fixed;
+  width: 100%; }
+
+.mobile-off-canvas-menu {
+  margin-top: 10px;
+  background-color: #fefefe; }
+  .mobile-off-canvas-menu li {
+    border-bottom: 0.1px #737373 solid; }
 
 .site-navigation {
   color: #4b4a4a;
