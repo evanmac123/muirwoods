@@ -1,79 +1,84 @@
-.site-navigation{
-  color:$medium-gray;
+// main styling for all top right nav
+// construction happens in navigation.php, custom walker classes, and header
+
+.site-navigation {
+  color: $medium-gray;
   position: fixed;
   z-index: 1;
-  top:0;
-  background-color: white;
+  top: 0;
+  background-color: #fefefe;
   padding: 30px 0 30px 30px;
+  width: 100%;
+  height: $header-top-length;
 
- }
-
-  .top-bar-left{
-    float:none;
+  .top-bar-left {
+    float: none;
     position: fixed;
     padding: 10px;
-    z-index:5;
+    z-index: 5;
   }
-  .top-bar-right{
+
+  .top-bar-right {
     position: fixed;
     padding: 10px;
-    top:50px;
+    top: 50px;
   }
 
-  .top-bar-r{
-    font-size:.8em;
-    float:right;
+  .top-bar-r {
+    font-size: 0.8em;
+    float: right;
 
+    .current_page_item a {
+      color: $primary-color;
+      @include underline;
+      position: relative;
+      display: inline-block;
 
-    .current_page_item a{
-         color:$primary-color;
-         @include underline;
-         position: relative;
-         display: inline-block;
-         &:after{
-           transform-origin: right;
-           transform: scaleX(1);
-         }
-     }
-      li{
-        &:before{
-          color: $secondary-color;
-          float: left;
-          margin: 7px 0 0 0em;
-          width: 1em;
-          content: '\25AA';
-          display: inline-block;
-        }
+      &:after {
+        transform-origin: right;
+        transform: scaleX(1);
+      }
+    }
 
-        a{
-          position: relative;
-          display: inline-block;
-          @include underline;
-          cursor:pointer;
-          &:hover {
-              &:after{
-              transform-origin: right;
-              transform: scaleX(1);
-            }
+    li {
+      &:before {
+        color: $secondary-color;
+        float: left;
+        margin: 7px 0 0;
+        width: 1em;
+        content: '\25AA';
+        display: inline-block;
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        @include underline;
+        cursor: pointer;
+
+        &:hover {
+          &:after {
+            transform-origin: right;
+            transform: scaleX(1);
           }
         }
-
-        &:first-child:before{
-          display:none;
-        }
       }
+
+      &:first-child:before {
+        display: none;
+      }
+    }
   }
 
-  body nav .program-bar-r{
+  .program-bar-r {
     width: 90%;
     float: right;
     text-align: right;
-    margin-top:1em;
+    margin-top: 1em;
 
-
-    .green-block{
+    .green-block {
       background-color: $primary-color;
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 700;
       width: 150px;
       float: right;
@@ -81,102 +86,99 @@
       text-align: center;
       width: 130px;
       padding: 10px 0;
-      a{
-        color:$white;
+
+      a {
+        color: $white;
       }
     }
 
-    .contact{
-      &:after{
-        content:'';
+    .contact {
+      &:after {
+        content: '';
         width: 20px;
         height: 20px;
         position: relative;
-        background-image: url(../images/call.png);
+        background-image: url("../images/call.png");
         display: block;
         top: -20px;
         left: 10px;
-        background-size:contain;
+        background-size: contain;
       }
     }
-    .search{
-      background-image: url(../images/search.png);
-      width:40px;
-      height:40px;
-      padding:5px;
+
+    .search {
+      background-image: url("../images/search.png");
+      width: 40px;
+      height: 40px;
+      padding: 5px;
       background-repeat: no-repeat;
       background-position: center;
     }
 
-    .top-level{
-      font-size: .8em;
+    .top-level {
+      font-size: 0.8em;
       font-weight: 700;
       width: 150px;
       float: right;
       height: 30px;
-      line-height:15px;
+      line-height: 15px;
       text-align: center;
       width: 130px;
       padding: 10px 0;
       border-right: 1px solid $secondary-color;
-      a{
-        color:$light-gray;
+
+      a {
+        color: $light-gray;
       }
-    }
 
-    li:hover ul{
-      display:block;
-    }
+      .sub-menu {
+        top: $header-top-length;
+        display: none;
+        right: auto;
+        left: 0;
+        float: left;
+        width: 100%;
+        position: fixed;
+        padding: 40px;
+        background-color: $primary-color;
+        color: $white;
+        z-index: 6;
+        margin-left: 0;
+        text-align: left;
+        background-image: url("../images/menu.jpg");
 
-
-    li ul{
-      display:none;
-      &:hover{
-       display:block;
-      }
-    }
-
-    li:hover ul {
-      top:190px;
-      right: auto;
-      left: 0;
-      float: left;
-      width: 100%;
-      position: fixed;
-      padding:40px;
-      background-color: $primary-color;
-      color: $white;
-      z-index:3;
-      margin-left:0;
-      text-align:left;
-      background-image: url(../images/menu.jpg);
-        .sub-menu-label{
+        .sub-menu-label {
           @include grid-column(5);
-          float:left;
-          .sub-menu-title{
+          float: left;
+
+          .sub-menu-title {
             font-size: 1.2em;
-            font-weight:300;
+            font-weight: 300;
             text-transform: uppercase;
           }
-          .sub-menu-description{
-            font-size:.9em;
-            font-weight:400;
+
+          .sub-menu-description {
+            font-size: 0.9em;
+            font-weight: 400;
           }
         }
-        .sub-menu-items{
+
+        .sub-menu-items {
           @include grid-column(3);
-          float:left;
+          float: left;
         }
-        a{
+
+        a {
           color: $white;
-        //  display:inline-block;
+          //  display:inline-block;
           font-size: 1.1em;
           font-weight: 400;
           border-bottom: 1px $secondary-color solid;
           line-height: 1.5em;
-          width:100%;
+          width: 100%;
         }
-        ul{
+
+        ul {
           top: 219px;
           margin-left: 170px;
           position: fixed;
@@ -190,18 +192,21 @@
           float: right;
           list-style-position: outside;
 
-          .sub-menu-label{
-            display:none;
+          .sub-menu-label {
+            display: none;
           }
-          background-image:none;
-          background-color:transparent;
-          li{
-            a{
-              padding: 0px 10px 10px 0;
-              border-bottom:none;
-              float:left;
-              }
+          background-image: none;
+          background-color: transparent;
+
+          li {
+            a {
+              padding: 0 10px 10px 0;
+              border-bottom: none;
+              float: left;
             }
           }
-         }
+        }
+      }
+    }
   }
+}

@@ -140,7 +140,12 @@ if ( ! class_exists( 'Foundationpress_Program_Bar_Walker' ) ) :
      		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
 
      		$item_output = $args->before;
-     		$item_output .= '<a'. $attributes .'>';
+        if (0 === $depth ) {
+     		$item_output .= '<a'. $attributes . 'class="opener">';
+       }
+       else{
+         	$item_output .= '<a'. $attributes .'>';
+       }
      		$item_output .= $args->link_before . $title . $args->link_after;
      		$item_output .= '</a>';
      		$item_output .= $args->after;

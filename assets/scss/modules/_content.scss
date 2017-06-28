@@ -1,9 +1,9 @@
 .main-wrap {
   @include grid-row();
-  margin-top: 10rem;
+  margin-top: 12rem;
 
   @include breakpoint(medium) {
-    margin-top: 10rem;
+    margin-top: $header-top-length;
   }
 }
 
