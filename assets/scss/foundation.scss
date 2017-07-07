@@ -22,6 +22,9 @@
 @import 'font-awesome';
 @import 'motion-ui';
 
+//Mixins
+@import 'mixins';
+
 // Foundation global styles
 @include foundation-global-styles;
 
@@ -90,3 +93,8 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+@import "templates/left-sidebar";
+@import "templates/top-menus";
+
+// Custom Global Styling
+@import "typography";

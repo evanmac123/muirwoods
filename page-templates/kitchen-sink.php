@@ -11,7 +11,7 @@ get_header(); ?>
 		<div class="main-wrap" role="main">
 			<header class="kitchen-sink-header">
 				<h1 class="entry-title"><?php the_title(); ?></h1><hr>
-				<p class="lead">This page includes every single Foundation element so that we can make sure things work together smoothly.</p><hr>
+				<p class="lead">All basic styles for the Muir Wood Theme</p><hr>
 			</header>
 
 			<!-- Main wrapper for the components in the kitchen-sink -->
@@ -19,6 +19,33 @@ get_header(); ?>
 
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 
+					<!-- Typography -->
+					<h1> The wizard saw and wept h1</h1>
+					<h2> The wizard saw and wept h2</h2>
+					<h3> The wizard saw and wept h3</h3>
+					<h4> The wizard saw and wept h4</h4>
+					<h5> The wizard saw and wept h5</h5>
+					<h6> The wizard saw and wept h6</h6>
+					<p> Beginning April 15, 2017, Muir Wood will be an in-network mental health and substance abuse treatment provider with Anthem Blue Cross for both residential and outpatient programs. This will allow more families to have access to the exceptional mental health and substance abuse treatment offered at Muir Wood. In-network recognition by Anthem underscores our commitment to integrity, accountability, outcome tracking and evidence-based treatment.</p>
+					<a href="#"> This is a link </a>
+					<blockquote> Cats are cool</blockquote>
+					<ul>
+						<li>Example 1</li>
+						<li>Example 2</li>
+						<li>Example 3</li>
+						<li>Example 4</li>
+						<li>Example 5</li>
+					</ul>
+					<ol>
+						<li>Example 1</li>
+						<li>Example 2</li>
+						<li>Example 3</li>
+						<li>Example 4</li>
+						<li>Example 5</li>
+					</ol>
+
+					<bold> You can do a call out this way </bold>
+					<div class="bold">Or like this</div>
 					<!-- Abide -->
 					<h2 id="abide" class="docs-heading" data-magellan-target="abide"><a href="abide"></a>Abide</h2>
 					<form data-abide novalidate>

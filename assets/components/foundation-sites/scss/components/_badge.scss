@@ -20,7 +20,7 @@ $badge-color-alt: $black !default;
 
 /// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
 /// @type Map
-$badge-palette: $foundation-palette !default;
+$badge-palette: $theme-palette !default;
 
 /// Default padding inside badges.
 /// @type Number

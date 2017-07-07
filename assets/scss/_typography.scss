@@ -1,0 +1,98 @@
+h1 {
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $light-gray;
+}
+
+.sidebar-left .row {
+  //subtitle
+  margin-top: 2em;
+}
+
+blockquote {
+  color: $primary-color;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.9em;
+}
+//for all bolded statments
+.bold,
+.type__callout,
+bold {
+  font-weight: bold;
+  color: $medium-gray;
+}
+
+p a {
+  position: relative;
+  display: inline-block;
+  @include underline;
+  color: $primary-color;
+  cursor: pointer;
+  //transition: opacity 0.35s;
+}
+
+a:hover {
+  &:after {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+}
+
+.no-underline {
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li:before {
+  color: $primary-color;
+  float: left;
+  margin: 0 0 0 -1em;
+  width: 1em;
+  content: '\25AA';
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome */
+  color: $white;
+}
+
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $white;
+}
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $white;
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: $white;
+  opacity: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

@@ -49,7 +49,7 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
-$foundation-palette: (
+$theme-palette: (
   primary: #1779ba,
   secondary: #767676,
   success: #3adb76,
@@ -220,7 +220,7 @@ $accordionmenu-arrow-size: 6px;
 $badge-background: $primary-color;
 $badge-color: $white;
 $badge-color-alt: $black;
-$badge-palette: $foundation-palette;
+$badge-palette: $theme-palette;
 $badge-padding: 0.3em;
 $badge-minwidth: 2.1em;
 $badge-font-size: 0.6rem;
@@ -254,7 +254,7 @@ $button-sizes: (
   default: 0.9rem,
   large: 1.25rem,
 );
-$button-palette: $foundation-palette;
+$button-palette: $theme-palette;
 $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
@@ -394,7 +394,7 @@ $form-button-radius: $global-radius;
 $label-background: $primary-color;
 $label-color: $white;
 $label-color-alt: $black;
-$label-palette: $foundation-palette;
+$label-palette: $theme-palette;
 $label-font-size: 0.8rem;
 $label-padding: 0.33333rem 0.5rem;
 $label-radius: $global-radius;

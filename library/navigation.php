@@ -11,6 +11,8 @@ register_nav_menus( array(
 	'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
 	'program-bar-r'  => esc_html__( 'Right Program Bar', 'foundationpress' ),
 	'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
+	'bottom-nav' => esc_html__( 'Bottom', 'foundationpress' ),
+	'left-nav' => esc_html__( 'Left', 'foundationpress' ),
 ));
 
 
@@ -19,11 +21,35 @@ register_nav_menus( array(
  *
  * @link http://codex.wordpress.org/Function_Reference/wp_nav_menu
  */
+
+if ( ! function_exists( 'foundationpress_bottom_nav' ) ) {
+	function foundationpress_bottom_nav() {
+		wp_nav_menu( array(
+						'theme_location' => 'bottom-nav',
+						'walker' => new Foundationpress_Sub_Menu_Bottom_Walker(),
+						'depth'          => 2,
+						'menu_id'     => 'bottom-menu',
+						'menu_class' => 'large-centered'
+				));
+			}
+}
+
+if ( ! function_exists( 'foundationpress_left_nav' ) ) {
+	function foundationpress_left_nav() {
+		wp_nav_menu( array(
+						'theme_location' => 'left-nav',
+						'walker' => new Foundationpress_Sub_Menu_Left_Walker(),
+						'depth'          => 3,
+						'menu_id'     => 'side-menu',
+				));
+			}
+}
+
 if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 	function foundationpress_top_bar_r() {
 		wp_nav_menu( array(
 			'container'      => false,
-			'menu_class'     => 'dropdown menu',
+			'menu_class'     => 'dropdown menu top-bar-r',
 			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
 			'theme_location' => 'top-bar-r',
 			'depth'          => 3,
@@ -42,8 +68,8 @@ if ( ! function_exists( 'foundationpress_program_bar_r' ) ) {
 	function foundationpress_program_bar_r() {
 		wp_nav_menu( array(
 			'container'      => false,
-			'menu_class'     => 'dropdown menu',
-			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'menu_class'     => 'program-bar-r',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 			'theme_location' => 'program-bar-r',
 					'depth'          => 3,
 			'fallback_cb'    => false,
@@ -69,6 +95,22 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 		));
 	}
 }
+
+/**
+ * Add support for buttons in the top-bar menu:
+ * 1) In WordPress admin, go to Apperance -> Menus.
+ * 2) Click 'Screen Options' from the top panel and enable 'CSS CLasses' and 'Link Relationship (XFN)'
+ * 3) On your menu item, type 'has-form' in the CSS-classes field. Type 'button' in the XFN field
+ * 4) Save Menu. Your menu item will now appear as a button in your top-menu
+*/
+function muirwoods_logo() {
+    add_theme_support('custom-logo', array(
+			'height'      =>130,
+			'width'       => 130,
+		));
+}
+
+add_action('after_setup_theme', 'muirwoods_logo');
 
 
 /**

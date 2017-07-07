@@ -12,13 +12,16 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
 		<header>
+			<div class="column large-12">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
+		</div>
 		</header>
 		<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div>
 		<footer>
+
 			<?php
 				wp_link_pages(
 					array(
@@ -36,8 +39,19 @@ get_header(); ?>
 <?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
-
-</div>
+ <aside class="sidebar">
+	 <section>
+			 <nav>
+				 <?php foundationpress_left_nav(); ?>
+			 </nav>
+	 </section>
+</aside>
+<section>
+		<nav>
+				<div class="row">
+					<?php foundationpress_bottom_nav(); ?>
+				</div> 
+		</nav>
+</section>
 
 <?php get_footer();
