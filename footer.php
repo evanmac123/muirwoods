@@ -14,7 +14,23 @@
 		<div class="footer-container" data-sticky-footer>
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+				<div class="footer-form">
+			  <div class="row">
+					
+				<?php dynamic_sidebar( 'form-footer-widgets' ); ?>
+
+				</div>
+			</div>
+				<div class="footer-upper">
+					 <div class="row-16">
+				<?php dynamic_sidebar( 'upper-footer-widgets' ); ?>
+					</div>
+			</div>
+			<div class="footer-lower">
+				 <div class="row">
+				<?php dynamic_sidebar( 'lower-footer-widgets' ); ?>
+				</div>
+			</div>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>

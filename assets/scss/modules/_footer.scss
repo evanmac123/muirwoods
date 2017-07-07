@@ -1,18 +1,138 @@
 .footer-container {
   max-width: 100%;
   width: 100%;
-  margin: 0 auto;
-  border-top: 1px solid $medium-gray;
-  margin-top: rem-calc(60);
+  margin: rem-calc(60) auto 0;
+  color: $white;
+  padding: 30px 0 0;
+  font-size: 0.8em;
 }
 
 .footer {
-  @include grid-row();
-  padding: rem-calc(30) 0;
 
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  .footer-form {
+    background-color: $primary-color;
+    padding: 50px 0;
+    color: $white;
+
+    .form-title {
+      color: $white;
+    }
+
+    .form-description {}
+
+    nf-field {
+      color: $white;
+      width: 50%;
+      float: left;
+      padding: 10px;
+
+      input {
+        background-color: transparent;
+        color: $white;
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px $white solid;
+      }
+    }
+
+    nf-field:last-child {
+      width: 100%;
+    }
+
+    select {
+      background-color: transparent;
+      border: none;
+      border-bottom: $white 1px solid;
+      color: $white;
+    }
+
+    label {
+      color: $white;
+    }
+
+    .nf-error-msg {
+      color: $secondary-color;
+    }
+
+    textarea {
+      box-shadow: none;
+      background-color: transparent;
+      color: $white;
+      border: 1px $white solid;
+    }
+
+    input {
+      box-shadow: none;
+    }
+
+    .submit-wrap {
+      input {
+        border: 1px $white solid;
+        padding: 15px 40px;
+        float: right;
+        transition: all 0.45s;
+        font-weight: 700;
+
+        &:hover {
+          background-color: $white;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .footer-upper {
+    background-color: $medium-gray;
+    padding: 60px 0;
+    text-align: center;
+
+    .row-16 {
+      @include grid-row(16) {
+        article {
+          @include grid-column(2);
+
+          img {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-lower {
+    background-color: $dark-gray;
+    padding: 60px 0 ;
+  }
+}
+
+.footer-contact {
+  float: right;
+  text-align: right;
+
+  h4 {
+    color: $white;
+  }
+
+  img {
+    width: 40px;
+    padding: 0 0 0 10px;
+  }
+
+  a {
+    transition: opacity 0.35s;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  a:after {
+    display: none;
   }
 }
