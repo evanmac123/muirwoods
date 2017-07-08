@@ -19,9 +19,10 @@ blockquote {
   color: $primary-color;
   font-style: italic;
   font-weight: 300;
-  font-size: 1.9em;
+  font-size: 1.2em;
 }
 //for all bolded statments
+
 .bold,
 .type__callout,
 bold {
@@ -95,4 +96,35 @@ input:-moz-placeholder {
 
 .right {
   float: right;
+}
+
+.button-white {
+  border: 1px #5c8727 solid;
+  padding: 20px 40px 20px 20px;
+  font-size: 1.2em;
+  color: #5c8727;
+  font-weight: 300;
+  margin-top: 1em;
+  display: inline-flex;
+  transition: all 0.45s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+
+    &:after {
+      transform: translate(15px, 2px);
+    }
+  }
+
+  &:after {
+    content: '\25BA';
+    display: block;
+    width: 10px;
+    height: 10px;
+    transform: translate(10px, 2px);
+    margin: 0;
+    transition: all 0.2s;
+  }
 }

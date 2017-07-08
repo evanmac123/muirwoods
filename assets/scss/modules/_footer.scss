@@ -25,9 +25,14 @@
 
     nf-field {
       color: $white;
-      width: 50%;
       float: left;
-      padding: 10px;
+      padding: 10px 0 10px 0;
+      @include breakpoint(large){
+        @include grid-column(6);
+      }
+      @include breakpoint(small){
+        @include grid-column(12);
+      }
 
       input {
         background-color: transparent;
@@ -35,6 +40,7 @@
         border: none;
         box-shadow: none;
         border-bottom: 1px $white solid;
+        padding:10px 0 0 0;
       }
     }
 
@@ -91,11 +97,18 @@
 
     .row-16 {
       @include grid-row(16) {
-        article {
-          @include grid-column(2);
+         @include breakpoint(small){
+          article {
+            @include grid-column(2);
+          }
+        }
+        @include breakpoint(large) {
+          article {
+            @include grid-column(2);
 
-          img {
-            height: 30px;
+            img {
+              height: 30px;
+            }
           }
         }
       }

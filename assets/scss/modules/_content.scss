@@ -1,22 +1,20 @@
-.main-wrap {
-  @include grid-row();
-  margin-top: 12rem;
+.container {
+  margin-top: 10rem;
 
   @include breakpoint(large up) {
-    margin-top: $header-top-length;
+      margin-top: 10rem;
   }
   @include breakpoint(medium down) {
     margin-top: 0;
   }
 }
 
-.main-content {
+.main-wrap{
+  @include grid-row();
+}
 
+.main-content {
   // default 2 column
-  @include grid-column(12);
-  @include breakpoint(medium) {
-    @include grid-column(8);
-  }
 
   // 1 column
   .full-width.main-wrap & {

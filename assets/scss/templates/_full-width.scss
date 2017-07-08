@@ -1,0 +1,21 @@
+.full-width{
+  &__header-container{
+    height: 450px;
+    background-size: cover;
+    padding: 125px 0;
+  }
+
+  &__header-title{
+  }
+
+  .header-description{
+
+  }
+
+  .main-wrap{
+    padding:5em 0 0 0;
+    .row{
+      padding-bottom:3em;
+    }
+  }
+}

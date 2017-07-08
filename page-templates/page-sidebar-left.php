@@ -50,7 +50,7 @@ get_header(); ?>
 		<nav>
 				<div class="row">
 					<?php foundationpress_bottom_nav(); ?>
-				</div> 
+				</div>
 		</nav>
 </section>
 

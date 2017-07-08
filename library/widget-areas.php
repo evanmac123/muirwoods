@@ -41,7 +41,7 @@ function foundationpress_sidebar_widgets() {
 		'id' => 'form-footer-widgets',
 		'name' => __( 'Form Footer widgets', 'foundationpress' ),
 		'description' => __( 'Drag form widgets to this footer container', 'foundationpress' ),
-		'before_widget' => '<div class="row"> <article id="%1$s" class="large-8 left large-offset-2 columns widget %2$s">',
+		'before_widget' => '<div class="row"> <article id="%1$s" class="small-10 small-offset-1 columns widget %2$s">',
 		'after_widget' => '</article></div>',
 		'before_title' => '<h6>',
 		'after_title' => '</h6>',
