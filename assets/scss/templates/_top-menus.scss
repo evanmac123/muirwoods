@@ -1,6 +1,7 @@
 // main styling for all top right nav
 // construction happens in navigation.php, custom walker classes, and header
 //mobile-menu
+
 .title-bar {
   background-color: $white;
   color: $white;
@@ -17,7 +18,22 @@
     border-bottom: 0.1px $light-gray solid;
   }
 }
+
+.opened {
+  &::after {
+    content: "\0025BE";
+    display: block;
+    transform: scale(2) translateX(27px);
+    margin: 0;
+    transition: all 0.2s;
+    background-color: transparent;
+    color: $primary-color;
+    z-index: -3;
+    width: 20px;
+  }
+}
 //desk-top
+
 .site-navigation {
   color: $medium-gray;
   position: fixed;
@@ -27,12 +43,13 @@
   width: 100%;
   height: $header-top-length;
 
-  .top-bar-title{
-    padding:0;
-    img{
-      width:140px;
-      height:140px;
-      padding:5px;
+  .top-bar-title {
+    padding: 0;
+
+    img {
+      width: 140px;
+      height: 140px;
+      padding: 5px;
     }
   }
 
@@ -44,8 +61,8 @@
 
   .top-bar-right {
     position: fixed;
-    padding: 25px 0 0 0;
-    top: 0px;
+    padding: 25px 0 0;
+    top: 0;
   }
 
   .top-bar-r {
@@ -103,13 +120,17 @@
     .green-block {
       background-color: $primary-color;
       font-size: 0.8em;
-      font-weight: 700;
-      width: 150px;
+      font-weight: 400;
       float: right;
-      height: 60px;
+      height: 40px;
       text-align: center;
-      width: 130px;
-      padding: 10px 0;
+      padding: 10px 10px 10px 40px;
+      border-right: #8e968e solid 1px;
+      transition:.45s all;
+       &:hover{
+         opacity:.9;
+
+       }
 
       a {
         color: $white;
@@ -117,26 +138,33 @@
     }
 
     .contact {
-      &:after {
-        content: '';
-        width: 20px;
-        height: 20px;
-        position: relative;
-        background-image: url("../images/call.png");
-        display: block;
-        top: -20px;
-        left: 10px;
-        background-size: contain;
+      a {
+        &:before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          position: relative;
+          background-image: url("../images/call.png");
+          display: block;
+          background-size: contain;
+          margin-left: -2em;
+          float: left;
+        }
       }
     }
 
     .search {
-      background-image: url("../images/search.png");
-      width: 40px;
-      height: 40px;
-      padding: 5px;
-      background-repeat: no-repeat;
-      background-position: center;
+      padding:10px;
+      a {
+        &:before {
+          content: '';
+          padding: 8px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../images/search.png");
+          background-size: contain;
+        }
+      }
     }
 
     .top-level {
@@ -153,6 +181,11 @@
 
       a {
         color: $light-gray;
+        transition: 0.45s all;
+
+        &:hover {
+          color: $primary-color;
+        }
       }
 
       .sub-menu {
@@ -210,12 +243,28 @@
 
         a {
           color: $white;
-          //  display:inline-block;
           font-size: 1.1em;
           font-weight: 400;
-          border-bottom: 1px $secondary-color solid;
-          line-height: 1.5em;
+          line-height: 1.7em;
           width: 100%;
+          @include underline;
+          position: relative;
+          display: inline-block;
+
+          &:after {
+            transform-origin: left;
+            transform: scaleX(1);
+            background-color: $secondary-color;
+          }
+
+          &:hover {
+            opacity: 0.9;
+
+            &:after {
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+          }
         }
 
         ul {
@@ -231,6 +280,11 @@
           background-color: transparent;
           float: right;
           list-style-position: outside;
+          display: block;
+
+          .closer {
+            display: none;
+          }
 
           .sub-menu-label {
             display: none;
