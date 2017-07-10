@@ -26,7 +26,7 @@
     nf-field {
       color: $white;
       float: left;
-      padding: 10px 0 10px 0;
+      padding: 10px 20px 0 0;
       @include breakpoint(large){
         @include grid-column(6);
       }

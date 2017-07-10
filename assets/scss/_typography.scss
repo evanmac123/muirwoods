@@ -114,7 +114,7 @@ input:-moz-placeholder {
     color: $white;
 
     &:after {
-      transform: translate(15px, 2px);
+      transform: translate(15px, 0px);
     }
   }
 
@@ -123,8 +123,41 @@ input:-moz-placeholder {
     display: block;
     width: 10px;
     height: 10px;
-    transform: translate(10px, 2px);
+    transform: translate(10px, 0px);
     margin: 0;
     transition: all 0.2s;
+    background-color:transparent;
+  }
+}
+
+.button-green {
+  background-color: $primary-color;
+  color: $white;
+  padding: 20px 40px 20px 20px;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-top: 1em;
+  display: inline-flex;
+  transition: all 0.45s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color:$primary-color;
+
+    &:after {
+      transform: translate(15px, 0px);
+    }
+  }
+
+  &:after {
+    content: '\25BA';
+    display: block;
+    width: 10px;
+    height: 10px;
+    transform: translate(10px,0px);
+    margin: 0;
+    transition: all 0.2s;
+    background-color:transparent;
   }
 }
