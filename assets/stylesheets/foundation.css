@@ -5455,7 +5455,11 @@ select {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+          backface-visibility: hidden;
+  float: left; }
+  @media print, screen and (min-width: 40em) {
+    .off-canvas-content {
+      float: none; } }
 
 @media print, screen and (min-width: 40em) {
   .position-left.reveal-for-medium {
@@ -7189,7 +7193,7 @@ a.thumbnail {
   Add your scss files below to structure your project styles
 */
 @media print, screen and (min-width: 64em) {
-  .mobile-menu, .site-mobile-title {
+  .mobile-menu, .site-mobile-title, .title-bar-right, .title-bar-left {
     display: none !important; } }
 
 @media screen and (max-width: 63.9375em) {
@@ -7277,7 +7281,7 @@ a.thumbnail {
 
 @media screen and (min-width: 64em) {
   .container {
-    margin-top: 9.3rem; } }
+    margin-top: 11em; } }
 
 @media screen and (max-width: 63.9375em) {
   .container {
@@ -7418,6 +7422,12 @@ a.thumbnail {
         height: 320px; } }
   .post__list-single .content {
     padding: 2em; }
+
+.off-canvas-content {
+  float: left; }
+  @media print, screen and (min-width: 64em) {
+    .off-canvas-content {
+      float: none; } }
 
 .footer-container {
   max-width: 100%;
@@ -8098,7 +8108,6 @@ li:before {
 .title-bar {
   background-color: #fefefe;
   color: #fefefe;
-  padding: 10px;
   width: 100%; }
 
 li, ul {

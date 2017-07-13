@@ -255,6 +255,7 @@ $maincontent-class: 'off-canvas-content' !default;
 @mixin off-canvas-content() {
   transition: transform $offcanvas-transition-length $offcanvas-transition-timing;
   backface-visibility: hidden;
+
 }
 
 /// Adds styles that reveal an off-canvas panel.
@@ -301,6 +302,12 @@ $content: $maincontent-class
 
   .off-canvas-content {
     @include off-canvas-content;
+    @include breakpoint(small){
+    float: left;
+    }
+    @include breakpoint(medium){
+    float: none;
+    }
   }
 
   // Reveal off-canvas panel on larger screens

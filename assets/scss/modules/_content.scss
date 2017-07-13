@@ -1,7 +1,7 @@
 .container {
 
   @include breakpoint(large up) {
-      margin-top: 9.3rem;
+      margin-top: 11em;
   }
   @include breakpoint(medium down) {
     margin-top: 46px;
@@ -96,6 +96,13 @@
   .content{
       padding: 2em;
   }
-
-
 }
+
+  .off-canvas-content {
+    @include breakpoint(small){
+    float: left;
+    }
+    @include breakpoint(large){
+    float: none;
+    }
+  }

@@ -1,6 +1,6 @@
 // Navigation breakpoints
 
-.mobile-menu ,.site-mobile-title{
+.mobile-menu ,.site-mobile-title, .title-bar-right, .title-bar-left{
   @include hide-for(large);
 }
 
@@ -34,6 +34,8 @@
 .mobile-menu {
   display: none; // prevents repaint caused by JS hiding menu onload
 }
+
+
 
 .mobile-menu,
 .mobile-off-canvas-menu {
