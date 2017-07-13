@@ -10,6 +10,9 @@ li {
   @include breakpoint(small) {
     display:none;
   }
+  @include breakpoint(medium) {
+    display:block;
+  }
   .menu-item {
     @include menu-item;
   }
@@ -64,7 +67,7 @@ li {
 
   .menu-item a {
     border: 1px $primary-color solid;
-    padding: 20px;
+    padding: 10px;
     font-size: 1.2em;
     color: $primary-color;
     font-weight: 300;

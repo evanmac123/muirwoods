@@ -5455,8 +5455,7 @@ select {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  float: left; }
+          backface-visibility: hidden; }
 
 @media print, screen and (min-width: 40em) {
   .position-left.reveal-for-medium {
@@ -8020,6 +8019,9 @@ li:before {
 
 #side-menu {
   display: none; }
+  @media print, screen and (min-width: 40em) {
+    #side-menu {
+      display: block; } }
   #side-menu .menu-item {
     font-size: 0.9em;
     font-weight: 400;
@@ -8060,7 +8062,7 @@ li:before {
     position: relative; }
   #bottom-menu .menu-item a {
     border: 1px #5c8727 solid;
-    padding: 20px;
+    padding: 10px;
     font-size: 1.2em;
     color: #5c8727;
     font-weight: 300;
@@ -8663,20 +8665,40 @@ li, ul {
       .home__testimonials-description {
         font-size: 20px; } }
 
+.home .home__links a {
+  border-left: .2px #f1f1f1 solid; }
+  .home .home__links a:hover .home__links-image {
+    background-position: top; }
+    .home .home__links a:hover .home__links-image img {
+      -webkit-transform: translateY(-10px);
+          -ms-transform: translateY(-10px);
+              transform: translateY(-10px); }
+  .home .home__links a:hover .home__links-title {
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px); }
+
 .home .home__links-image {
+  padding: 80px 40px 40px;
+  background-position: center;
+  -webkit-transition: all .45s;
+  transition: all .45s;
   -webkit-background-size: cover;
-          background-size: cover;
-  padding: 80px 40px 40px; }
+          background-size: cover; }
   .home .home__links-image img {
     height: 60px;
     text-align: center;
-    padding: 10px; }
+    padding: 10px;
+    -webkit-transition: all .45s;
+    transition: all .45s; }
 
 .home .home__links-title {
   font-size: 1.5em;
   color: #fefefe;
   text-transform: uppercase;
-  font-weight: 300; }
+  font-weight: 300;
+  -webkit-transition: all .45s;
+  transition: all .45s; }
 
 .home .home__links-description {
   font-size: 0.9em;

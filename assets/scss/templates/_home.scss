@@ -260,14 +260,32 @@
   }
 
   .home__links {
+    a{
+      border-left:.2px #f1f1f1 solid;
+      &:hover{
+        .home__links-image{
+          background-position: top;
+          img {
+            transform:translateY(-10px);
+          }
+        }
+        .home__links-title {
+          transform:translateY(-10px);
+        }
+      }
+    }
     &-image {
-      background-size: cover;
+    //  background-size: cover;
       padding: 80px 40px 40px;
+      background-position: center;
+      transition:all .45s;
+      background-size:cover;
 
       img {
         height: 60px;
         text-align: center;
         padding: 10px;
+        transition:all .45s;
       }
     }
 
@@ -276,6 +294,7 @@
       color: $white;
       text-transform: uppercase;
       font-weight: 300;
+      transition:all .45s;
     }
 
     &-description {

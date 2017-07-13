@@ -99,7 +99,7 @@ get_header(); ?>
 
 		<section class="home__links">
 			<div class="row expanded large-collapse small-uncollapse">
-				<div class="large-4 column home__links-left">
+				<a href="<?php the_field('home-links-center-left');?>" class="large-4 column home__links-left">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-left-icon');?>">
 						<div class="home__links-title">
@@ -109,8 +109,8 @@ get_header(); ?>
 					<div class="home__links-description">
 						<?php the_field("home-links-left-description");  ?>
 					</div>
-				</div>
-				<div class="large-4 column home__links-center">
+				</a>
+				<a href="<?php the_field('home-links-center-link');?>" class="large-4 column home__links-center">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-center-img");?>')">
 						<img src="<?php the_field('home-links-center-icon');?>">
 						<div class="home__links-title">
@@ -120,8 +120,8 @@ get_header(); ?>
 					<div class="home__links-description">
 						<?php the_field("home-links-center-description"); ?>
 					</div>
-				</div>
-				<div class="large-4 column home__links-right">
+				</a>
+				<a href="<?php the_field('home-links-center-right');?>" class="large-4 column home__links-right">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-right-icon');?>">
 						<div class="home__links-title">
@@ -131,7 +131,7 @@ get_header(); ?>
 					<div class="home__links-description">
 						<?php the_field("home-links-right-description"); ?>
 					</div>
-				</div>
+				</a>
 			</div>
 		</section>
 	</div>
