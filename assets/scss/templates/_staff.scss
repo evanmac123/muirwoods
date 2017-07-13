@@ -1,0 +1,53 @@
+
+.staff-list{
+  text-align:center;
+  border:1px $white-gray solid;
+  padding:20px;
+  color:$light-gray;
+  transition: all 1s;
+  &:hover{
+    border:1px $primary-color solid;
+
+    .staff-list__image{
+
+    }
+    .staff-list__title{
+      color:$light-gray;
+      &:after{
+        transform-origin: right;
+        transform: scaleX(1);
+      }
+    }
+    img{
+       }
+     }
+
+
+  &__image{
+    margin:0 auto;
+    overflow:hidden;
+    img{
+      height: 300px;
+      object-fit: cover;
+      //border-bottom: $primary-color solid 2px;
+    }
+  }
+  h4{
+    color:$primary-color;
+  }
+
+  &__title{
+    padding:1em 0 0 .5em;
+    @include underline;
+    display: inline-block;
+  }
+  &__position{
+    font-size:.8em;
+
+  }
+  &__email{
+    font-size:.8em;
+  }
+
+
+}

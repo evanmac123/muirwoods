@@ -13,10 +13,14 @@ get_header(); ?>
 
 <div class="main-wrap" role="main">
 	<article class="main-content">
+		<div class="large-centered large-10">
+			<h1 class="large-12 column">Our Staff</h1>
+
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
+
 			<?php get_template_part( 'template-parts/staff', get_post_format() ); ?>
 		<?php endwhile; ?>
 
@@ -36,10 +40,9 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php endif; ?>
-
+			</div>
 	</article>
 	<?php get_sidebar(); ?>
-
 </div>
 
 <?php get_footer();

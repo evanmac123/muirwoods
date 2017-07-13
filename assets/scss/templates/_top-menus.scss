@@ -6,8 +6,11 @@
   background-color: $white;
   color: $white;
   padding: 10px;
-  position: fixed;
   width: 100%;
+}
+
+li, ul{
+  cursor:pointer;
 }
 
 .mobile-off-canvas-menu {
@@ -36,7 +39,6 @@
 
 .site-navigation {
   color: $medium-gray;
-  position: fixed;
   z-index: 1;
   top: 0;
   background-color: #fefefe;
@@ -153,7 +155,7 @@
       }
     }
 
-    .search {
+    .search-overlay {
       padding:10px;
       a {
         &:before {

@@ -3,7 +3,8 @@ jQuery(document);
 //Menu opening and closing
 $('.opener').click(function(e) {
   var $this = $(this).parent();
-  if($this.hasClass(".green-block")){
+  if($this.hasClass("green-block")){
+
   }
   else{
     e.preventDefault();
@@ -27,7 +28,7 @@ $('.sub-menu-closer').click(function(e) {
 
 
 //menu search functionality - needs full screen search plugin
-$('.search').on('focus, click', function(event) {
+$('.search-overlay').on('focus, click', function(event) {
   // Prevent the default action
   event.preventDefault();
 

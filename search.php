@@ -9,14 +9,13 @@
 get_header(); ?>
 
 <div class="main-wrap" role="main">
-
 <?php do_action( 'foundationpress_before_content' ); ?>
 
 <article <?php post_class('main-content') ?> id="search-results">
-	<header>
-	    <h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
+	<header class="large-12 column">
+	    <h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?></h1>
 	</header>
-
+	<div class="large-8 column">
 	<?php if ( have_posts() ) : ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -41,11 +40,14 @@ get_header(); ?>
 			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 		</nav>
 	<?php endif; ?>
+	</div>
+	<div class="large-4 column">
+		<?php dynamic_sidebar( 'blog-right-widgets' ); ?>
+	</div>
 
 </article>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
 
 </div>
 

@@ -19,6 +19,10 @@ get_header(); ?>
 
 <div class="main-wrap" role="main">
 	<article class="main-content">
+		<header  class="large-12 column">
+		    <h1 class="entry-title"><?php _e( 'Archive:', 'foundationpress' ); ?> <?php echo get_search_query(); ?></h1>
+		</header>
+	<div class="large-8 column">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
@@ -42,9 +46,11 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php endif; ?>
-
+	</div>
+	<div class="large-4 column">
+		<?php dynamic_sidebar( 'blog-right-widgets' ); ?>
+	</div>
 	</article>
-	<?php get_sidebar(); ?>
 
 </div>
 

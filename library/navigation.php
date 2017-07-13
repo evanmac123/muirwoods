@@ -29,7 +29,7 @@ if ( ! function_exists( 'foundationpress_bottom_nav' ) ) {
 						'walker' => new Foundationpress_Sub_Menu_Bottom_Walker(),
 						'depth'          => 2,
 						'menu_id'     => 'bottom-menu',
-						'menu_class' => 'large-centered'
+						'menu_class' => 'large-centered large-12'
 				));
 			}
 }

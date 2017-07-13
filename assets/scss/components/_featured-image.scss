@@ -3,12 +3,13 @@
   background-position: center;
   background-repeat: no-repeat;
   height: rem-calc(100);
+  margin-bottom: 2em;
 
   @include breakpoint(medium) {
     height: rem-calc(200);
   }
 
   @include breakpoint(xlarge) {
-    height: rem-calc(400);
+    height: rem-calc(300);
   }
 }

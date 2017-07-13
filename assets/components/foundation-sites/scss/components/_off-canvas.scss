@@ -90,7 +90,7 @@ $maincontent-class: 'off-canvas-content' !default;
     &.is-overlay-absolute {
       position: absolute;
     }
-    
+
     &.is-overlay-fixed {
       position: fixed;
     }
@@ -255,6 +255,7 @@ $maincontent-class: 'off-canvas-content' !default;
 @mixin off-canvas-content() {
   transition: transform $offcanvas-transition-length $offcanvas-transition-timing;
   backface-visibility: hidden;
+  float: left;
 }
 
 /// Adds styles that reveal an off-canvas panel.
@@ -326,4 +327,3 @@ $content: $maincontent-class
     }
   }
 }
-

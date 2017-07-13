@@ -75,6 +75,22 @@ function my_wp_nav_menu_objects_start_in( $sorted_menu_items, $args ) {
     }
 }
 
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '<div><a class="read-more" href="%1$s">%2$s</a></div>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+add_theme_support( 'post-thumbnails' );
+
+
 
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */

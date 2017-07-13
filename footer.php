@@ -15,7 +15,7 @@
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<div class="footer-form">
-			  <div class="row">
+			  <div class="row expanded">
 					<?php dynamic_sidebar( 'form-footer-widgets' ); ?>
 				</div>
 			</div>

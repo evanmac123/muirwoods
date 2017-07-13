@@ -1,62 +1,67 @@
 // Navigation breakpoints
-.mobile-menu,
-.site-title-bar {
+
+.mobile-menu ,.site-mobile-title{
   @include hide-for(large);
 }
 
 .desktop-menu,
-.site-navigation, .top-bar-left {
+.site-navigation,
+.top-bar-left {
   @include show-for(large);
 }
-
-
-
 // Site title
+
 .site-mobile-title a {
   // placeholder
+}
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  @include breakpoint(medium down) {
+    border-bottom: $white-gray;
+  }
 }
 
 .site-desktop-title a {
   font-weight: bold;
 }
-
-
-
 // Mobile menu
+
 .mobile-menu {
   display: none; // prevents repaint caused by JS hiding menu onload
 }
 
-
 .mobile-menu,
 .mobile-off-canvas-menu {
-
+  float:right;
   // submenu arrow
   .is-accordion-submenu-parent {
     > a::after {
       border-color: $accordionmenu-arrow-color transparent transparent;
     }
+
     &.active > a::after {
       border-color: $menu-item-color-active transparent transparent;
     }
   }
-
   // current page
   .current_page_item > a {
     font-weight: bold;
   }
 }
-
-
-
 // Tablet and desktop menu
-.desktop-menu {
 
+.desktop-menu {
   // submenu arrow
   li.is-dropdown-submenu-parent {
     > a::after {
       border-color: $accordionmenu-arrow-color transparent transparent;
     }
+
     &.active > a::after {
       border-color: $menu-item-color-active transparent transparent;
     }
@@ -68,18 +73,48 @@
     padding: 0; // prevents container visibility on small screens
   }
 }
-
-
-
 // WP post navigation
+
 .post-navigation {
   @include clearfix;
 }
 
 .nav-previous {
-  float:left;
+  float: left;
+  border: 1px solid $primary-color;
+  padding: 20px;
+  transition: all 0.45s;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+
+    a {
+      color: $white;
+    }
+  }
 }
 
 .nav-next {
-  float:right;
+  border: 1px solid $primary-color;
+  padding: 20px;
+  float: right;
+  transition: all 0.45s;
+
+  &:hover {
+    background-color: $primary-color;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+#full-screen-search {
+  display: none;
+  transition: all 0.5s linear;
+}
+
+#full-screen-search.open {
+  display: block;
 }

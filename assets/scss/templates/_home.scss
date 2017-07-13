@@ -15,21 +15,32 @@
     color: $white;
 
     &-column {
-      padding: 100px;
       color: $white;
       text-align: left;
-      height: 400px;
-      background-position: center;
       transition: all 0.45s;
-
-      &:first-child:hover {
-        color: $white;
+      @include breakpoint(small){
+        padding: 70px;
+        height: auto;
+        background-size:cover;
+      }
+      @include breakpoint(medium){
+        padding: 136px;
+        background-size:cover;
+      }
+      @include breakpoint(large){
+        padding: 120px 70px;
+        height: 400px;
+      }
+      &:first-child {
         background-position: left;
       }
 
-      &:last-child:hover {
-        color: $white;
+      &:last-child {
         background-position: right;
+      }
+      &:hover{
+        color: $white;
+        background-position: center;
       }
     }
 
@@ -46,22 +57,49 @@
 
   &__slider {
     &-title {
-      @include grid-column(8);
-      white-space: normal;
-      text-transform: uppercase;
-      font-size: 2.5em;
-      font-weight: 300;
-      line-height: 1.2em;
-      text-align: left;
-      padding: 0;
-      font-weight: 300;
-      color: #585858;
+      @include breakpoint(medium){
+        @include grid-column(6,0);
+        font-size: 40px;
+        line-height: 1.1em;
+        padding:0;
+      }
+      @include breakpoint(small){
+        @include grid-column(12,0);
+        white-space: normal;
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 1.0em;
+        text-align: left;
+        color: #585858;
+        font-size: 30px;
+        padding:0;
+      }
     }
 
     &-description {
-      @include grid-column(6);
-      padding: 0;
+
+      @include breakpoint(medium){
+        @include grid-column(5,0);
+        font-size: 16px;
+        padding:0;
+      }
+      @include breakpoint(small){
+        @include grid-column(12,0);
+        font-size: 14px;
+        padding:0;
+      }
     }
+    &__slider-button{
+
+      @include breakpoint(medium){
+        //transform:scale(1);
+      }
+      @include breakpoint(small){
+      //  transform:scale(.6);
+      }
+
+    }
+
   }
 
   &__videos {
@@ -72,6 +110,10 @@
       font-size: 1em;
       line-height: 1.0em;
       padding: 1em 0 2em;
+    }
+
+    &-split-description{
+      padding:2em 0;
     }
 
     &-title {
@@ -125,40 +167,74 @@
         display: inline-block;
         height: 100%;
         vertical-align: middle;
-
+        }
         img {
           vertical-align: middle;
-          height: 60px;
+          @include breakpoint(medium){
+          height:60px;
+          width:auto;
+          }
+          @include breakpoint(small){
+            width:80%;
+            height:auto;
+          }
         }
-      }
     }
   }
 
   &__testimonials {
     background-color: $white;
 
+
     h3 {
       text-transform: uppercase;
       margin: 20px 0 0;
+      @include breakpoint(medium){
+      font-size: 1.5em;
+      padding:20px;
+      }
+
+      @include breakpoint(small){
+        font-size:20px;
+        padding:10px;
+      }
     }
 
     &-subject {
-      font-size: 1.2em;
       color: $primary-color;
       @include grid-column-position(center);
+      @include breakpoint(small){
+       font-size:14px;
+       line-height:18px;
+      }
+      @include breakpoint(medium){
+        font-size:20px;
+      }
     }
 
     &-quote {
-      @include grid-column(8);
-      @include grid-column-position(center);
+
+       @include breakpoint(large){
+        font-size:18px;
+        line-height:22px;
+        @include grid-column(8);
+        @include grid-column-position(center);
+       }
+       @include breakpoint(small){
+        font-size:14px;
+        line-height:16px;
+        @include grid-column(11);
+        @include grid-column-position(center);
+       }
     }
 
     &-photo {
-      width: 100px;
-      height: 100px;
+
       position: relative;
       overflow: hidden;
       border-radius: 50%;
+        width: 100px;
+        height: 100px;
 
       img {
         object-fit: cover;
@@ -170,9 +246,16 @@
     &-description {
       font-size: 0.9em;
       color: $light-gray;
-      @include grid-column(10);
+      @include grid-column(11);
       @include grid-column-position(center);
       font-style: italic;
+      @include breakpoint(small){
+        font-size:14px;
+        line-height:18px;
+      }
+      @include breakpoint(medium){
+        font-size:20px;
+      }
     }
   }
 

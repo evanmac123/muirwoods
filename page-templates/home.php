@@ -39,11 +39,15 @@ get_header(); ?>
 					<?php the_field("home-videos-description"); ?> </p>
 				<div class="large-6 column">
 					<?php the_field("home-videos-left-video"); ?>
+					<div class="home__videos-split-description">
 					<?php the_field("home-videos-left-description"); ?>
+					</div>
 				</div>
 				<div class="large-6 column">
 					<?php the_field("home-videos-right-video"); ?>
+					<div class="home__videos-split-description">
 					<?php the_field("home-videos-right-description"); ?>
+				</div>
 				</div>
 				<a class="button-green" href="<?php the_field(" home-videos-button "); ?>">
 					<?php the_field("home-videos-button-text"); ?>
@@ -77,7 +81,7 @@ get_header(); ?>
 					$images = get_field('home-sponser-gallery');
 					if( $images ): ?>
 					<?php foreach( $images as $image ): ?>
-					<div class="column large-3 small-4">
+					<div class="column small-3">
 						<span class="helper"></span>
 						<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div>
