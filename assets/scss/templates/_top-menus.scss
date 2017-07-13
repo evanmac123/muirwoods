@@ -8,8 +8,9 @@
   width: 100%;
 }
 
-li, ul{
-  cursor:pointer;
+li,
+ul {
+  cursor: pointer;
 }
 
 .mobile-off-canvas-menu {
@@ -127,11 +128,11 @@ li, ul{
       text-align: center;
       padding: 10px 10px 10px 40px;
       border-right: #8e968e solid 1px;
-      transition:.45s all;
-       &:hover{
-         opacity:.9;
+      transition: 0.45s all;
 
-       }
+      &:hover {
+        opacity: 0.9;
+      }
 
       a {
         color: $white;
@@ -155,7 +156,8 @@ li, ul{
     }
 
     .search-overlay {
-      padding:10px;
+      padding: 10px;
+
       a {
         &:before {
           content: '';
@@ -189,7 +191,7 @@ li, ul{
         }
       }
 
-      .sub-menu {
+      .sub-menu-0 {
         top: $header-top-length;
         display: none;
         right: auto;
@@ -204,6 +206,10 @@ li, ul{
         margin-left: 0;
         text-align: left;
         background-image: url("../images/menu.jpg");
+        background-size: cover;
+
+
+
 
         .sub-menu-closer {
           @include grid-column(2);
@@ -267,39 +273,49 @@ li, ul{
             }
           }
         }
+        .sub-menu-1 {
+          position: relative;
 
-        ul {
-          top: 219px;
-          margin-left: 170px;
-          position: fixed;
-          padding: 0;
-          background-color: transparent;
-          color: #fefefe;
-          z-index: 3;
-          margin-right: 0;
-          background-image: none;
-          background-color: transparent;
-          float: right;
-          list-style-position: outside;
-          display: block;
 
-          .closer {
-            display: none;
+          .sub-menu-items {
+            display: block;
+            position: fixed;
+            left: 68%;
+            width: 180px;
+            top: 205px;
+            height: 270px;
+            padding: 0 0 0px 30px;
+            -webkit-transition: all 0.45s;
+            transition: all 0.45s;
+            opacity: 0;
           }
-
-          .sub-menu-label {
-            display: none;
-          }
-          background-image: none;
-          background-color: transparent;
 
           li {
             a {
               padding: 0 10px 10px 0;
               border-bottom: none;
               float: left;
+              font-size: 0.94em;
+              line-height: 1.45em;
+              transition: all 0.45s;
+
+              &:hover {
+                opacity: 0.7;
+              }
+
+              &:after {
+                display: none;
+              }
             }
           }
+        }
+
+
+        .menu-item-has-children:hover, .sub-menu-1:hover {
+          .sub-menu-items{
+            opacity:1;
+          }
+
         }
       }
     }

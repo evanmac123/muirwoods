@@ -1,7 +1,7 @@
 .container {
 
   @include breakpoint(large up) {
-      margin-top: 11em;
+      margin-top: 8.7em;
   }
   @include breakpoint(medium down) {
     margin-top: 46px;

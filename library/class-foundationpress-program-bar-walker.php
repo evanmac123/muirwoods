@@ -27,8 +27,13 @@ if ( ! class_exists( 'Foundationpress_Program_Bar_Walker' ) ) :
 	         $indent = str_repeat("\t", $depth);
 	         global $description;
 					 global $title;
-	         $output .= "\n$indent<ul class='sub-menu'><div class='sub-menu-closer'></div><div class='sub-menu-label'><div class='sub-menu-title'>".$title."</div> <div class='sub-menu-description'>".$description."</div></div><div class='sub-menu-items'>\n";
-	     }
+           if($depth === 0){
+	         $output .= "\n$indent<ul class='sub-menu-$depth'><div class='sub-menu-closer'></div><div class='sub-menu-label'><div class='sub-menu-title'>".$title."</div> <div class='sub-menu-description'>".$description."</div></div><div class='sub-menu-items'>\n";
+          }
+          elseif($depth === 1){
+            $output .= "\n$indent<ul class='sub-menu-$depth'><div class='sub-menu-items'>\n";
+          }
+       }
 
        function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
          if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {

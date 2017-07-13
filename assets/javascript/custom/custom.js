@@ -14,15 +14,15 @@ $('.opener').click(function(e) {
       $this.removeClass("opened");
     } else {
       $('.opened').removeClass("opened");
-      $('.sub-menu').slideUp(400);
-      $this.children('.sub-menu').delay(400).slideDown("slow");
+      $('.sub-menu-0').slideUp(400);
+      $this.children('.sub-menu-0').delay(400).slideDown("slow");
       $this.addClass("opened");
     }
 }
 });
 
 $('.sub-menu-closer').click(function(e) {
-  $('.sub-menu').slideUp(400);
+  $('.sub-menu-0').slideUp(400);
   $('.opened').removeClass("opened");
 });
 
