@@ -21,6 +21,7 @@ $('.opener').click(function(e) {
 }
 });
 
+//closing sub menu
 $('.sub-menu-closer').click(function(e) {
   $('.sub-menu-0').slideUp(400);
   $('.opened').removeClass("opened");
@@ -47,3 +48,10 @@ $('#full-screen-search-close').on('click', function(event) {
   // Hide the Full Screen Search
   $('#full-screen-search').removeClass('open');
 });
+
+$('.contact').click(function(e) {
+  e.preventDefault();
+  $('html, body').animate({
+      scrollTop: $(".footer-container").offset().top + -110
+    }, 2000);
+  });

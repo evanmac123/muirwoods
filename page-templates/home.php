@@ -33,10 +33,12 @@ get_header(); ?>
 
 		<section class="home__videos" style="background-image:url('<?php the_field("home-videos-background-img"); ?> ');">
 			<div class="main-wrap">
-
-				<h1 class="home__videos-title column large-10"> <?php the_field("home-videos-title");  ?> </h1>
-				<p class="home__videos-description column large-6">
+				<div class="row">
+				<h1 class="home__videos-title column large-11"> <?php the_field("home-videos-title");  ?> </h1>
+				<p class="home__videos-description column large-10">
 					<?php the_field("home-videos-description"); ?> </p>
+				</div>
+					<div class="row">
 				<div class="large-6 column">
 					<?php the_field("home-videos-left-video"); ?>
 					<div class="home__videos-split-description">
@@ -49,9 +51,12 @@ get_header(); ?>
 					<?php the_field("home-videos-right-description"); ?>
 				</div>
 				</div>
+			</div>
+				<div class="row">
 				<a class="button-green" href="<?php the_field(" home-videos-button "); ?>">
 					<?php the_field("home-videos-button-text"); ?>
 				</a>
+			</div>
 			</div>
 		</section>
 
@@ -83,7 +88,7 @@ get_header(); ?>
 					<?php foreach( $images as $image ): ?>
 					<div class="column small-3">
 						<span class="helper"></span>
-						<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div>
 					<?php endforeach; ?>
 					<?php endif; ?>
@@ -93,7 +98,8 @@ get_header(); ?>
 
 		<section class="full-width home__testimonials">
 			<h3>Expert Testimonials</h3>
-			<?php masterslider(5); ?>'
+			<?php get_field('home-testimonial-slider') ;?>
+
 
 		</section>
 

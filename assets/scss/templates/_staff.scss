@@ -1,33 +1,18 @@
 
 .staff-list{
-  text-align:center;
-  border:1px $white-gray solid;
-  padding:20px;
-  color:$light-gray;
+  border: 1px #e4e4e4 solid;
+  color: #737373;
+  -webkit-transition: all 1s;
   transition: all 1s;
-  &:hover{
-    border:1px $primary-color solid;
-
-    .staff-list__image{
-
-    }
-    .staff-list__title{
-      color:$light-gray;
-      &:after{
-        transform-origin: right;
-        transform: scaleX(1);
-      }
-    }
-    img{
-       }
-     }
-
+  padding: 20px;
+  float: left;
+  margin-bottom: 2em;
 
   &__image{
     margin:0 auto;
     overflow:hidden;
     img{
-      height: 300px;
+      height: 220px;
       object-fit: cover;
       //border-bottom: $primary-color solid 2px;
     }

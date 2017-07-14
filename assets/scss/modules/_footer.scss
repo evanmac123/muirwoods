@@ -55,6 +55,7 @@
       border: none;
       border-bottom: $white 1px solid;
       color: $white;
+      transform: translateY(-10px);
     }
 
     label {
@@ -125,11 +126,22 @@
   .footer-lower {
     background-color: $dark-gray;
     padding: 60px ;
+    widget{
+      img{
+        width:150px;
+      }
+    }
     @include breakpoint(small){
     padding: 30px 0;
-      article{
-        padding:2em 1em 0 1em;
-      }
+    width:100%;
+    text-align: center;
+    article{
+      padding: 2em 1em 1em 1em;
+    }
+    .footer-contact{
+    text-align: center;
+    float:none;
+    }
     }
   }
 }

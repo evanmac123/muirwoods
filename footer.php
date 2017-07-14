@@ -14,7 +14,7 @@
 		<div class="footer-container" data-sticky-footer>
 			<footer class="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<div class="footer-form">
+				<div id="footer-form" class="footer-form">
 			  <div class="row expanded">
 					<?php dynamic_sidebar( 'form-footer-widgets' ); ?>
 				</div>

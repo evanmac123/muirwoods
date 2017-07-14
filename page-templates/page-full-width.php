@@ -16,7 +16,7 @@ get_header(); ?>
 		</div>
 		<div class="row">
 		<h4 class="full-width__header-description column large-8">
-			<?php the_field("header_description"); ?>
+			<?php the_field("header-description"); ?>
 		</h4>
 	</div>
 </div>
