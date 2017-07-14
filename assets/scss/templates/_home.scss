@@ -119,8 +119,8 @@
     &-description {
       @include grid-column-position(center);
       font-size: 1em;
-      line-height: 1.0em;
-      padding: 1em 0 2em;
+      line-height: 1.2em;
+      padding: 2em 2em;
     }
 
     &-split-description{
@@ -160,6 +160,7 @@
 
     &-description {
       font-size: 0.8em;
+
     }
 
     &-logo-description {
@@ -176,7 +177,16 @@
       float:left;
       border: rgb(224, 224, 224) 1px solid;
       background-color: $white-gray;
-      height: 150px;
+      @include breakpoint(medium){
+        width:20%;
+        height: 150px;
+      }
+      @include breakpoint(small){
+        width:33%;
+        height:auto;
+        padding:20px;
+        height: 150px;
+      }
 
       .helper {
         display: inline-block;
@@ -186,11 +196,10 @@
         img {
           vertical-align: middle;
           @include breakpoint(medium){
-          height:60px;
-          width:auto;
+          width: 60%;
           }
           @include breakpoint(small){
-            width:80%;
+            max-width:60%;
             height:auto;
           }
 

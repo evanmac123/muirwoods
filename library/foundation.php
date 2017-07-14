@@ -181,4 +181,3 @@ function foundationpress_title_bar_responsive_toggle() {
 	}
 }
 endif;
-

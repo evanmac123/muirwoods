@@ -42,7 +42,6 @@ function wpt_register_theme_customizer( $wp_customize ) {
 				'section'  => 'mobile_menu_layout',
 				'settings' => 'wpt_mobile_menu_layout',
 				'choices'  => array(
-					'topbar'    => 'Topbar',
 					'offcanvas' => 'Offcanvas',
 				),
 			)
@@ -59,8 +58,8 @@ function mobile_nav_class( $classes ) {
 	if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) :
 		$classes[] = 'offcanvas';
 	elseif ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) :
-		$classes[] = 'topbar';
+		$classes[] = 'offcanvas';
 	endif;
-	return $classes;
+	return 	$classes[] = 'offcanvas';
 }
 endif;

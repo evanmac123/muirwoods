@@ -28,7 +28,7 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
 	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
+		<div class="site-title-bar show-for-small show-for-medium-up" >
 			<div class="title-bar-left">
 				<span class="site-mobile-title title-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> </a>

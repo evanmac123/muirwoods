@@ -10,12 +10,12 @@ get_header(); ?>
 		<div class="row">
 		<?php while ( have_posts() ) : the_post(); ?>
 				<header>
-					<h1 class="entry-title column large-10"><?php the_title(); ?></h2>
+					<h1 style="color:<?php echo  get_field_object('header-dark-or-light-background')['value'];?>;" class="entry-title column large-10"><?php the_title(); ?></h2>
 				</header>
 		<?php endwhile;?>
 		</div>
 		<div class="row">
-		<h4 class="full-width__header-description column large-8">
+		<h4 style="color:<?php echo get_field_object('header-dark-or-light-background')['value'];?>;"  class="full-width__header-description column large-8">
 			<?php the_field("header-description"); ?>
 		</h4>
 	</div>
