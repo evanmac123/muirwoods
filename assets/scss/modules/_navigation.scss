@@ -38,7 +38,6 @@
   background-color: $white;
   color: $white;
   width: 100%;
-  padding:1em;
 }
 
 li,
@@ -59,13 +58,14 @@ ul {
   &::after {
     content: "\0025BE";
     display: block;
-    transform: scale(2) translateX(27px);
+    transform: scale(2.5) translateX(27px);
     margin: 0;
     transition: all 0.2s;
     background-color: transparent;
-    color: $primary-color;
+    color: #5c8727;
     z-index: -3;
-    width: 20px;
+    width: 8px;
+    margin-top: 25px;
   }
 }
 //desk-top
@@ -86,20 +86,21 @@ ul {
     img {
       width: 140px;
       height: 140px;
-      padding: 0px 5px 10px 5px;
+      padding: 5px;
+      margin-left: 5px;
     }
   }
 
   .top-bar-left {
-    float: none;
-    position: fixed;
-    z-index: 5;
+    float: left;
+    z-index:20;
   }
 
   .top-bar-right {
     position: fixed;
-    padding: 25px 0 0;
+    padding: 40px 0 0 0;
     top: 0;
+    right: 0;
   }
 
   .top-bar-r {
@@ -149,21 +150,24 @@ ul {
   }
 
   .program-bar-r {
-    width: 90%;
+    width: 85%;
     float: right;
     text-align: right;
     margin-top: 1em;
+    background-color: transparent;
 
     .green-block {
-      background-color: $primary-color;
+      background-color: #5c8727;
       font-size: 0.8em;
-      font-weight: 400;
       float: right;
-      height: 40px;
+      margin-top: -9px;
       text-align: center;
-      padding: 10px 10px 10px 40px;
+      padding: 13px;
       border-right: #8e968e solid 1px;
+      -webkit-transition: 0.45s all;
       transition: 0.45s all;
+      position: relative;
+      font-weight: 700;
 
       &:hover {
         opacity: 0.9;
@@ -191,8 +195,6 @@ ul {
     }
 
     .search-overlay {
-      padding: 10px;
-
       a {
         &:before {
           content: '';
@@ -208,17 +210,23 @@ ul {
     .top-level {
       font-size: 0.8em;
       font-weight: 700;
-      width: 130px;
+      width: 145px;
       float: right;
       height: 30px;
       line-height: 15px;
       text-align: center;
       padding: 10px 0;
       border-right: 1px solid $secondary-color;
+      position: relative;
 
       a {
-        color: $light-gray;
+        color:$light-gray;
         transition: 0.45s all;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+        display: inherit;
 
         &:hover {
           color: $primary-color;
@@ -248,6 +256,8 @@ ul {
           float: left;
           width: 30px;
           height: 30px;
+          position:fixed;
+          right:4%;
           background-repeat: no-repeat;
           background-size: contain;
           background-image: url('../images/icons/close.png');

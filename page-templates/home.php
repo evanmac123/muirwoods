@@ -98,14 +98,14 @@ get_header(); ?>
 
 		<section class="full-width home__testimonials">
 			<h3>Expert Testimonials</h3>
-			<?php get_field('home-testimonial-slider') ;?>
+				<?php  the_field('home-testimonial-slider'); ?>
 
 
 		</section>
 
 		<section class="home__links">
 			<div class="row expanded large-collapse small-uncollapse">
-				<a href="<?php the_field('home-links-center-left');?>" class="large-4 column home__links-left">
+				<div class="large-4 column home__links-left">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-left-icon');?>">
 						<div class="home__links-title">
@@ -114,9 +114,12 @@ get_header(); ?>
 					</div>
 					<div class="home__links-description">
 						<?php the_field("home-links-left-description");  ?>
+						<a href="<?php the_field('home-links-center-left');?>">
+							Read More
+						</a>
 					</div>
-				</a>
-				<a href="<?php the_field('home-links-center-link');?>" class="large-4 column home__links-center">
+				</div>
+				<div class="large-4 column home__links-center">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-center-img");?>')">
 						<img src="<?php the_field('home-links-center-icon');?>">
 						<div class="home__links-title">
@@ -125,9 +128,12 @@ get_header(); ?>
 					</div>
 					<div class="home__links-description">
 						<?php the_field("home-links-center-description"); ?>
+						<a href="<?php the_field('home-links-center-left');?>">
+							Read More
+						</a>
 					</div>
-				</a>
-				<a href="<?php the_field('home-links-center-right');?>" class="large-4 column home__links-right">
+				</div>
+				<div class="large-4 column home__links-right">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-right-icon');?>">
 						<div class="home__links-title">
@@ -136,8 +142,11 @@ get_header(); ?>
 					</div>
 					<div class="home__links-description">
 						<?php the_field("home-links-right-description"); ?>
+						<a href="<?php the_field('home-links-center-left');?>">
+							Read More
+						</a>
 					</div>
-				</a>
+				</div>
 			</div>
 		</section>
 	</div>

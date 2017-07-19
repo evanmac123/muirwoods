@@ -121,6 +121,7 @@
       font-size: 1em;
       line-height: 1.2em;
       padding: 2em 2em;
+      text-align: left;
     }
 
     &-split-description{
@@ -131,12 +132,17 @@
       @include grid-column-position(center);
     }
 
-    iframe {
-      width: 100%;
-      -webkit-box-shadow: 4px 4px 22px -1px rgba(62, 62, 62, 0.85);
-      -moz-box-shadow: 4px 4px 22px -1px rgba(62, 62, 62, 0.85);
-      box-shadow: 4px 4px 22px -1px rgba(62, 62, 62, 0.85);
-    }
+    iframe:after {
+      width:100%;
+      content: "";
+      height:10px;
+      display:block;
+
+     width: 100%;
+      -webkit-box-shadow: 1px 6px 12px -4px rgba(84,84,84,1);
+     -moz-box-shadow: 1px 6px 12px -4px rgba(84,84,84,1);
+      box-shadow: 1px 6px 12px -4px rgba(84,84,84,1);
+      }
   }
 
   &__insurance {
@@ -159,12 +165,9 @@
     }
 
     &-description {
-      font-size: 0.8em;
-
     }
 
     &-logo-description {
-      font-size: 0.6em;
       margin-top: 2em;
     }
   }
@@ -287,17 +290,17 @@
   .home__links {
     a{
       border-left:.2px #f1f1f1 solid;
-      &:hover{
-        .home__links-image{
-          background-position: top;
-          img {
-            transform:translateY(-10px);
-          }
-        }
-        .home__links-title {
-          transform:translateY(-10px);
-        }
-      }
+      // &:hover{
+      //   .home__links-image{
+      //     background-position: top;
+      //     img {
+      //       transform:translateY(-10px);
+      //     }
+      //   }
+      //   .home__links-title {
+      //     transform:translateY(-10px);
+      //   }
+      // }
     }
     &-image {
     //  background-size: cover;
@@ -325,6 +328,7 @@
     &-description {
       font-size: 0.9em;
       padding: 2em;
+      text-align:left;
     }
   }
 }

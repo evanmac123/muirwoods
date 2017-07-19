@@ -19,6 +19,34 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
+			<?php
+				while ( have_rows("flexible_content") ) : the_row();
+				if( get_row_layout() == 'standard_row_full_width' ): ?>
+				<div class="row">
+					<div class='large-12 column'><?php the_sub_field('full_width'); ?>
+					</div>
+				</div>
+			<?php elseif( get_row_layout() == 'row_2_columns' ): ?>
+				<div class="row">
+					<div class='large-6 column'><?php the_sub_field('left_column_2'); ?></div>
+					<div class='large-6 column'><?php the_sub_field('right_column_2'); ?></div>
+				</div>
+				<?php
+				elseif( get_row_layout() == 'row_3_columns' ):?>
+					<div class="row">
+						<div class='large-4 column'><?php the_sub_field('left_column_3'); ?></div>
+						<div class='large-4 column'><?php the_sub_field('center_column_3'); ?></div>
+						<div class='large-4 column'><?php the_sub_field('right_column_3'); ?></div>
+					</div><?php
+				elseif( get_row_layout() == 'row_4_columns' ): ?>
+				<div class="row">
+					<div class='large-3 column'><?php the_sub_field('left_column_4'); ?></div>
+					<div class='large-3 column'><?php the_sub_field('center_left_column_4'); ?></div>
+					<div class='large-3 column'><?php the_sub_field('center_right_column_4'); ?></div>
+					<div class='large-3 column'><?php the_sub_field('right_column_4'); ?></div>
+				</div>
+				<?php endif;
+endwhile;?>
 		</div>
 		<footer>
 
