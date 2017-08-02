@@ -18,21 +18,41 @@
   // placeholder
 }
 
+.call-bar{
+  background-color:$primary-color;
+  width:100%;
+  position:fixed;
+  top:0;
+  display:block;
+  height: 36px;
+  z-index: 10;
+  li{
+    float:right;
+    a{
+      color:white;
+      cursor:none;
+    }
+  }
+}
+
+
 .site-header {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 36px;
   background-color: white;
   z-index: 10;
   height: $header-top-length;
   @include breakpoint(medium down) {
     height: auto;
     border-bottom: $white-gray;
+    padding: 10px;
   }
 }
 // main styling for all top right nav
 // construction happens in navigation.php, custom walker classes, and header
 //mobile-menu
+
 
 .site-title-bar {
   background-color: $white;
@@ -94,12 +114,13 @@ ul {
   .top-bar-left {
     float: left;
     z-index:20;
+    position:fixed;
   }
 
   .top-bar-right {
     position: fixed;
     padding: 40px 0 0 0;
-    top: 0;
+    top: 36px;
     right: 0;
   }
 
@@ -150,7 +171,7 @@ ul {
   }
 
   .program-bar-r {
-    width: 85%;
+    width: 90%;
     float: right;
     text-align: right;
     margin-top: 1em;
@@ -210,7 +231,7 @@ ul {
     .top-level {
       font-size: 0.8em;
       font-weight: 700;
-      width: 145px;
+      width: 130px;
       float: right;
       height: 30px;
       line-height: 15px;
@@ -234,7 +255,7 @@ ul {
       }
 
       .sub-menu-0 {
-        top: $header-top-length;
+        top: 192px;
         display: none;
         right: auto;
         left: 0;
@@ -249,6 +270,7 @@ ul {
         text-align: left;
         background-image: url("../images/menu.jpg");
         background-size: cover;
+        height: 290px;
 
         .sub-menu-closer {
           @include grid-column(2);
@@ -271,15 +293,17 @@ ul {
         .sub-menu-label {
           @include grid-column(5);
           float: left;
+          margin-top: -16px;
+
 
           .sub-menu-title {
-            font-size: 1.2em;
+            font-size: 1.6em;
             font-weight: 300;
             text-transform: uppercase;
           }
 
           .sub-menu-description {
-            font-size: 0.9em;
+            font-size: 1em;
             font-weight: 400;
           }
         }
@@ -321,14 +345,14 @@ ul {
           .sub-menu-items {
             display: block;
             position: fixed;
-            left: 68%;
-            width: 100%;
+            left: 61%;
             top: 205px;
             height: 270px;
-            padding: 0 0 0 30px;
+            padding: 0px 0 0 100px;
             -webkit-transition: all 0.45s;
             transition: all 0.45s;
             opacity: 0;
+            width: 28%;
           }
 
           li {
@@ -339,6 +363,8 @@ ul {
               font-size: 0.94em;
               line-height: 1.45em;
               transition: all 0.45s;
+
+              float:none;
 
               &:hover {
                 opacity: 0.7;
@@ -351,8 +377,7 @@ ul {
           }
         }
 
-        .menu-item-has-children:hover,
-        .sub-menu-1:hover {
+        .menu-item-has-children:hover {
           .sub-menu-items {
             opacity: 1;
           }
@@ -410,31 +435,35 @@ ul {
 
 .nav-previous {
   float: left;
-  border: 1px solid $primary-color;
-  padding: 20px;
+  padding: 20px 0;
   transition: all 0.45s;
+  max-width:300px;
+  font-weight: 700;
+  a{
   color: $primary-color;
+  }
 
   &:hover {
-    background-color: $primary-color;
-
     a {
-      color: $white;
+      color: $light-gray;
     }
   }
 }
 
 .nav-next {
-  border: 1px solid $primary-color;
-  padding: 20px;
+  padding: 20px 0;
   float: right;
   transition: all 0.45s;
+  max-width:300px;
+  text-align: right;
+  font-weight: 700;
+  a{
+  color: $primary-color;
+  }
 
   &:hover {
-    background-color: $primary-color;
-
     a {
-      color: $white;
+      color: $light-gray;
     }
   }
 }

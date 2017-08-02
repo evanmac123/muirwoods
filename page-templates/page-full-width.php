@@ -10,7 +10,9 @@ get_header(); ?>
 		<div class="row">
 		<?php while ( have_posts() ) : the_post(); ?>
 				<header>
+					<div class="row">
 					<h1 style="color:<?php echo  get_field_object('header-dark-or-light-background')['value'];?>;" class="entry-title column large-10"><?php the_title(); ?></h2>
+					</div>
 				</header>
 		<?php endwhile;?>
 		</div>
@@ -29,7 +31,7 @@ get_header(); ?>
 	<article <?php post_class("main-content") ?> id="post-<?php the_ID(); ?>">
 
 		<?php do_action( "foundationpress_page_before_entry_content" ); ?>
-		<div class="entry-content">
+		<div class="entry-content column large-12">
 			<?php
 				while ( have_rows("flexible_content") ) : the_row();
 				if( get_row_layout() == 'standard_row_full_width' ): ?>

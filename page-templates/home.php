@@ -34,7 +34,7 @@ get_header(); ?>
 		<section class="home__videos" style="background-image:url('<?php the_field("home-videos-background-img"); ?> ');">
 			<div class="main-wrap">
 				<div class="row">
-				<h1 class="home__videos-title column large-11"> <?php the_field("home-videos-title");  ?> </h1>
+				<h2 class="home__videos-title column large-11"> <?php the_field("home-videos-title");  ?> </h2>
 				<p class="home__videos-description column large-10">
 					<?php the_field("home-videos-description"); ?> </p>
 				</div>
@@ -106,6 +106,7 @@ get_header(); ?>
 		<section class="home__links">
 			<div class="row expanded large-collapse small-uncollapse">
 				<div class="large-4 column home__links-left">
+					<a href="<?php the_field('home-links-center-left');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-left-icon');?>">
 						<div class="home__links-title">
@@ -114,12 +115,12 @@ get_header(); ?>
 					</div>
 					<div class="home__links-description">
 						<?php the_field("home-links-left-description");  ?>
-						<a href="<?php the_field('home-links-center-left');?>">
-							Read More
-						</a>
+						<div class="home__links-more">Read More</div>
 					</div>
+					</a>
 				</div>
 				<div class="large-4 column home__links-center">
+					<a href="<?php the_field('home-links-center-left');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-center-img");?>')">
 						<img src="<?php the_field('home-links-center-icon');?>">
 						<div class="home__links-title">
@@ -128,12 +129,12 @@ get_header(); ?>
 					</div>
 					<div class="home__links-description">
 						<?php the_field("home-links-center-description"); ?>
-						<a href="<?php the_field('home-links-center-left');?>">
-							Read More
-						</a>
-					</div>
+							<div class="home__links-more">Read More</div>
+						</div>
+					</a>
 				</div>
 				<div class="large-4 column home__links-right">
+					<a href="<?php the_field('home-links-center-left');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-right-icon');?>">
 						<div class="home__links-title">
@@ -142,10 +143,9 @@ get_header(); ?>
 					</div>
 					<div class="home__links-description">
 						<?php the_field("home-links-right-description"); ?>
-						<a href="<?php the_field('home-links-center-left');?>">
-							Read More
-						</a>
+							<div class="home__links-more">Read More</div>
 					</div>
+				</a>
 				</div>
 			</div>
 		</section>

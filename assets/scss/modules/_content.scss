@@ -110,7 +110,8 @@ body{
 }
 
   .off-canvas-content {
-    @include breakpoint(small){
+    @include breakpoint(medium down){
+    width:100%;
     float: left;
     }
     @include breakpoint(large){

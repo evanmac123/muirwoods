@@ -26,7 +26,7 @@
 	<?php endif; ?>
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
-
+	<?php foundationpress_call_bar(); ?>
 	<header class="site-header" role="banner">
 		<div class="site-title-bar show-for-small show-for-medium-up" >
 			<div class="title-bar-left">
@@ -38,6 +38,14 @@
 				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 			</div>
 		<nav class="site-navigation top-bar" role="navigation">
+
+			<div class="top-bar-right">
+				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
+					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+				<?php endif; ?>
+				<?php foundationpress_top_bar_r(); ?>
+				<?php foundationpress_program_bar_r(); ?>
+			</div>
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -49,14 +57,6 @@
 							bloginfo('name');
 						} ?>
 				</div>
-			</div>
-
-			<div class="top-bar-right">
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-				<?php foundationpress_top_bar_r(); ?>
-				<?php foundationpress_program_bar_r(); ?>
 			</div>
 		</nav>
 	</div>

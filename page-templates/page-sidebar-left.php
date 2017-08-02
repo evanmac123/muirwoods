@@ -17,7 +17,7 @@ get_header(); ?>
 		</div>
 		</header>
 		<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-		<div class="entry-content">
+		<div class="entry-content column large-12">
 			<?php the_content(); ?>
 			<?php
 				while ( have_rows("flexible_content") ) : the_row();
@@ -74,12 +74,5 @@ endwhile;?>
 			 </nav>
 	 </section>
 </aside>
-<section>
-		<nav>
-				<div class="row">
-					<?php foundationpress_bottom_nav(); ?>
-				</div>
-		</nav>
-</section>
 
 <?php get_footer();
