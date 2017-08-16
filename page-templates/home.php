@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<section class="home__split">
 			<div class="row expanded large-collapsed">
-				<a href="<?php the_field(" home-split-left-link "); ?>" class="large-6 column home__split-column" style="background-image:url(<?php the_field("home-split-left-background-img");?>)">
+				<a href="<?php the_field("home-split-left-link"); ?>" class="large-6 column home__split-column" style="background-image:url(<?php the_field("home-split-left-background-img");?>)">
 					<div class="home__split-title">
 						<?php the_field("home-split-left-title"); ?>
 					</div>
@@ -20,7 +20,7 @@ get_header(); ?>
 						<?php the_field("home-split-left-description"); ?>
 					</div>
 				</a>
-				<a href="<?php the_field(" home-split-right-link "); ?>" class="large-6 column  home__split-column" style="background-image:url(<?php the_field("home-split-right-background-img");?>)">
+				<a href="<?php the_field("home-split-right-link"); ?>" class="large-6 column  home__split-column" style="background-image:url(<?php the_field("home-split-right-background-img");?>)">
 					<div class="home__split-title">
 						<?php the_field("home-split-right-title"); ?>
 					</div>
@@ -53,7 +53,7 @@ get_header(); ?>
 				</div>
 			</div>
 				<div class="row">
-				<a class="button-green" href="<?php the_field(" home-videos-button "); ?>">
+				<a class="button-green" href="<?php the_field("home-videos-button"); ?>">
 					<?php the_field("home-videos-button-text"); ?>
 				</a>
 			</div>
@@ -106,7 +106,7 @@ get_header(); ?>
 		<section class="home__links">
 			<div class="row expanded large-collapse small-uncollapse">
 				<div class="large-4 column home__links-left">
-					<a href="<?php the_field('home-links-center-left');?>">
+					<a href="<?php the_field('home-links-left-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-left-icon');?>">
 						<div class="home__links-title">
@@ -120,7 +120,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="large-4 column home__links-center">
-					<a href="<?php the_field('home-links-center-left');?>">
+					<a href="<?php the_field('home-links-center-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-center-img");?>')">
 						<img src="<?php the_field('home-links-center-icon');?>">
 						<div class="home__links-title">
@@ -134,7 +134,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="large-4 column home__links-right">
-					<a href="<?php the_field('home-links-center-left');?>">
+					<a href="<?php the_field('home-links-right-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
 						<img src="<?php the_field('home-links-right-icon');?>">
 						<div class="home__links-title">
