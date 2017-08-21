@@ -31,7 +31,9 @@
   font-size: 0.9em;
   font-weight: 400;
   border-bottom: 1px $secondary-color solid;
-  line-height: 2.3em;
+  line-height: 1.2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 @mixin shadow{

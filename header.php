@@ -18,6 +18,25 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,700" rel="stylesheet">
 	</head>
 	<body <?php body_class(); ?>>
+        
+    <!-- Google Analytics Code Begins --> 
+    <script>
+        (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-39767596-1', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview'); 
+    </script>
+        <!-- Google Analytics Code Ends --> 
+        
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
