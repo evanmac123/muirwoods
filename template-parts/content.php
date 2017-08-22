@@ -10,7 +10,7 @@
 
 ?>
 <a href="<?php the_permalink(); ?>">
-<div   id="post-<?php the_ID(); ?>" class="post__list-single" >
+<div id="post-<?php the_ID(); ?>" class="post__list-single" >
 	<div class="row expanded">
 		<?php //grabbing all content
 		$image = get_the_post_thumbnail_url();
