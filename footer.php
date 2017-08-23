@@ -44,7 +44,7 @@
 <?php wp_footer(); ?>
 
 <!-- Begin Keymetric Tracking Code -->
-< script type = 'text/javascript' > 
+<script type = 'text/javascript' > 
     function onKeyMetricComplete() {
     if (window.location.pathname == "/thank-you/") {
         km_LogData('101');

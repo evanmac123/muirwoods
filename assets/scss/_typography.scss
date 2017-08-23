@@ -10,6 +10,11 @@ h6 {
   color: $light-gray;
 }
 
+section.home__testimonials h3 {
+        color: $primary-color;
+        font-size: 2.3rem;
+}
+
 .entry-title{
   padding-bottom: .5em;
 }
@@ -62,6 +67,10 @@ a:hover {
 
 ul li {
   list-style-type: none;
+}
+
+article ul li {
+  list-style-type: circle;
 }
 
 ul li:before {

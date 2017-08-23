@@ -176,6 +176,10 @@ ul {
     text-align: right;
     margin-top: 1em;
     background-color: transparent;
+      
+    li.top-level:nth-child(2) {
+        border-right: 0;        
+      }
 
     .green-block {
       background-color: #5c8727;
