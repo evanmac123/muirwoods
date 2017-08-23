@@ -69,12 +69,13 @@ ga('send', 'pageview');
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php
-						// Display the Custom Logo
-						the_custom_logo();
-						// No Custom Logo, just display the site's name
-						if (!has_custom_logo()) {
-							bloginfo('name');
-						} ?>
+						// Display the Custom Logo, default logo, or the site's name
+						if ( has_custom_logo() ) {
+                            the_custom_logo();
+                        } else { ?>
+                            <img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
+                        <?php } ?>
+                    </a>
 				</div>
 			</div>
 		</nav>
