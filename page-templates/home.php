@@ -97,7 +97,7 @@ get_header(); ?>
 
 
 		<section class="full-width home__testimonials">
-			<h3>Expert Testimonials</h3>
+			<h3><?php  the_field('home-testimonial-header'); ?></h3>
 				<?php  the_field('home-testimonial-slider'); ?>
 
 
@@ -135,7 +135,7 @@ get_header(); ?>
 				</div>
 				<div class="large-4 column home__links-right">
 					<a href="<?php the_field('home-links-right-link');?>">
-					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
+					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-right-img");?>')">
 						<img src="<?php the_field('home-links-right-icon');?>">
 						<div class="home__links-title">
 							<?php the_field("home-links-right-title"); ?>

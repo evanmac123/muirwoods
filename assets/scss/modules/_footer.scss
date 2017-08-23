@@ -37,8 +37,8 @@
       }
 
       input {
-        background-color: transparent;
-        color: $white;
+        background-color: $white;
+        color: $black;
         border: none;
         box-shadow: none;
         border-bottom: 1px $white solid;
@@ -51,11 +51,16 @@
     }
 
     select {
-      background-color: transparent;
+      background-color: $white;
       border: none;
       border-bottom: $white 1px solid;
-      color: $white;
+      color: $black;
       transform: translateY(-10px);
+        
+        &::placeholder {
+            color: $medium-gray
+        }
+        
     }
 
     label {
@@ -68,8 +73,8 @@
 
     textarea {
       box-shadow: none;
-      background-color: transparent;
-      color: $white;
+      background-color: $white;
+      color: $black;
       border: 1px $white solid;
     }
 
