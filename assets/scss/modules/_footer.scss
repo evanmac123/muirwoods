@@ -67,7 +67,7 @@
       color: $white;
     }
 
-    .nf-error-msg {
+    .nf-error-msg, span.ninja-forms-req-symbol {
       color: $secondary-color;
     }
 
@@ -100,7 +100,7 @@
 
   .footer-upper {
     background-color: $medium-gray;
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
     @include breakpoint(small){
      padding: 60px 0 40px 0;
@@ -136,6 +136,7 @@
         width:150px;
       }
     }
+      
     @include breakpoint(small){
     padding: 30px 0;
     width:100%;
@@ -175,4 +176,10 @@
   a:after {
     display: none;
   }
+}
+
+.footer-cta {
+    margin-top: 35px;
+    line-height: 1.2;
+    font-size: 1.3em;
 }

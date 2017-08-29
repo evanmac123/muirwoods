@@ -60,7 +60,7 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<section class=" home__insurance" style="background-image:url('<?php the_field("home-insurance-background-img"); ?>');">
+		<section class="home__insurance" style="background-image:url('<?php the_field("home-insurance-background-img"); ?>');">
 			<div class="column large-6 small-centered">
 				<div class="row">
 					<h3 class="home__insurance-title"> <?php the_field("home-insurance-title"); ?> </h3>
@@ -80,7 +80,7 @@ get_header(); ?>
 		</section>
 
 
-		<section class="home__sponser">
+		<section class="home__sponser hide-for-small-only">
 			<div class="row expanded">
 				<?php
 					$images = get_field('home-sponser-gallery');

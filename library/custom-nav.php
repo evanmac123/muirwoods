@@ -42,7 +42,7 @@ function wpt_register_theme_customizer( $wp_customize ) {
 				'section'  => 'mobile_menu_layout',
 				'settings' => 'wpt_mobile_menu_layout',
 				'choices'  => array(
-					'offcanvas' => 'Offcanvas',
+					'offcanvas' => 'offcanvas',
 				),
 			)
 		)

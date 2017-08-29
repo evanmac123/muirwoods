@@ -1,13 +1,18 @@
 h1 {
   text-transform: uppercase;
+  font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
 }
 
-h2,
 h3,
-h4,
 h5,
 h6 {
   color: $light-gray;
+  font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+}
+
+h2, h4 {
+    color: $primary-color;
+    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
 }
 
 section.home__testimonials h3 {
@@ -173,4 +178,16 @@ input:-moz-placeholder {
     transition: all 0.2s;
     background-color:transparent;
   }
+}
+
+.home__slider h2.home-slider-heading {
+    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-size: 40px;
+    color: $primary-color;
+    text-align: left;
+    line-height: 1.15;
+}
+
+.home__slider p.home__slider-description {
+    font-size: 16px;
 }
