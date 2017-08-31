@@ -15,9 +15,18 @@ h2, h4 {
     font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
 }
 
-section.home__testimonials h3 {
+.home__split-title h3 {
+    color: $white;
+    font-size: 1.3rem;
+}
+
+.home__testimonials h3 {
         color: $primary-color;
         font-size: 2.3rem;
+}
+
+.home__links-title h4 {
+    color: $white;
 }
 
 .entry-title{

@@ -19,6 +19,14 @@ body{
   }
 }
 
+.entry-content {
+  
+  a[href^="tel:"] {
+    color: $dark-gray;
+    text-decoration: none;
+  }
+}
+
 .main-wrap{
   @include grid-row();
   @include breakpoint(small) {
@@ -118,6 +126,21 @@ body{
     float: none;
     }
   }
+
+#mobile-logo {
+    
+    padding-bottom: 25px;
+    padding-top: 30px;
+    
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+
+div.ms-bullet.ms-bullet-selected {
+    background: $primary-color;
+}
 
 .updated {
     margin-bottom: 15px;

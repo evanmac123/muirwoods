@@ -88,6 +88,16 @@ ul {
     margin-top: 25px;
   }
 }
+
+// Anchor fix for sticky top menu hiding content
+
+#adm, #med, #acd, #fam, #rec, #adv, #iop, #exp, #cul, #dog, #staff-top {
+    padding-top: 200px;
+    margin-top: -200px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+}
+
 //desk-top
 
 .site-navigation {

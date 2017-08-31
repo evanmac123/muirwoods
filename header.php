@@ -49,11 +49,11 @@ ga('send', 'pageview');
 	<?php foundationpress_call_bar(); ?>
 	<header class="site-header" role="banner">
 		<div class="site-title-bar show-for-small show-for-medium-up" >
-			<div class="title-bar-left">
+			<!--<div class="title-bar-left">
 				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> </a>
+					<a href="<php echo esc_url( home_url( '/' ) ); ?>" rel="home"><php bloginfo( 'name' ); ?> </a>
 				</span>
-			</div>
+			</div>-->
 			<div class="title-bar-right">
 				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 			</div>
@@ -82,6 +82,11 @@ ga('send', 'pageview');
 		</nav>
 	</div>
 	</header>
-
 	<section class="container">
+        <div class="hide-for-large row">
+            <div id="mobile-logo" class="column small-6 medium-4 small-centered">
+                <img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
+            </div>
+        </div>
 		<?php do_action( 'foundationpress_after_header' );
+        
