@@ -35,16 +35,16 @@
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>
 
-<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
+
 		</div><!-- Close off-canvas content -->
 	</div><!-- Close off-canvas wrapper -->
-<?php endif; ?>
+
 
 
 <?php wp_footer(); ?>
 
 <!-- Begin Keymetric Tracking Code -->
-<script type = 'text/javascript' > 
+<script type = 'text/javascript' >
     function onKeyMetricComplete() {
     if (window.location.pathname == "/thank-you/") {
         km_LogData('101');
@@ -57,7 +57,7 @@ var KmHost = (("https:" == document.location.protocol) ? "https://km14221" : "ht
 var kmscr = document.createElement('script');
 kmscr.type = 'text/javascript';
 kmscr.src = KmHost + ".keymetric.net/KeyMetric.js";
-document.body.appendChild(kmscr); 
+document.body.appendChild(kmscr);
 
 </script>
 <!-- End Keymetric Tracking Code -->

@@ -19,8 +19,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 	</head>
 	<body <?php body_class(); ?>>
-        
-    <!-- Google Analytics Code Begins --> 
+
+    <!-- Google Analytics Code Begins -->
     <script>
         (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -34,16 +34,16 @@
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 ga('create', 'UA-39767596-1', 'auto');
 ga('require', 'displayfeatures');
-ga('send', 'pageview'); 
+ga('send', 'pageview');
     </script>
-        <!-- Google Analytics Code Ends --> 
-        
+        <!-- Google Analytics Code Ends -->
+
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
-	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
+
 	<div class="off-canvas-wrapper">
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
-	<?php endif; ?>
+
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	<?php foundationpress_call_bar(); ?>
@@ -89,4 +89,3 @@ ga('send', 'pageview');
             </div>
         </div>
 		<?php do_action( 'foundationpress_after_header' );
-        
