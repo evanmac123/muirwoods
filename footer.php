@@ -19,7 +19,7 @@
 					<?php dynamic_sidebar( 'form-footer-widgets' ); ?>
 				</div>
 			</div>
-				<div class="footer-upper">
+				<div class="footer-upper hide-for-small-only">
 					 <div class="row-16">
 					<?php dynamic_sidebar( 'upper-footer-widgets' ); ?>
 					</div>

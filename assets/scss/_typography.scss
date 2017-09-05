@@ -200,3 +200,26 @@ input:-moz-placeholder {
 .home__slider p.home__slider-description {
     font-size: 16px;
 }
+
+.home__slider h2.home-slider-heading-mobile {
+    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-size: 20px;
+    color: $primary-color;
+    text-align: left;
+    line-height: 1.25;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.home__slider p.home__slider-description-mobile {
+    font-size: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .home__split-column {
+        padding: 35px;
+    }
+}

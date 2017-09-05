@@ -16,6 +16,7 @@
  */
 
 get_header(); ?>
+<header class="featured-hero" role="banner" data-interchange="[http://muirwoodteen.com/wp-content/themes/muir-wood_2017-09-05_11-17/assets/images/blog-background.jpg, small], [http://muirwoodteen.com/wp-content/themes/muir-wood_2017-09-05_11-17/assets/images/blog-background.jpg, medium], [http://muirwoodteen.com/wp-content/themes/muir-wood_2017-09-05_11-17/assets/images/blog-background.jpg, large], [http://muirwoodteen.com/wp-content/themes/muir-wood_2017-09-05_11-17/assets/images/blog-background.jpg, xlarge]" style="background-image: url(&quot;http://muirwoodteen.com/wp-content/themes/muir-wood_2017-09-05_11-17/assets/images/blog-background.jpg&quot;);"> </header>
 
 <div class="main-wrap" role="main">
 	<article class="main-content">
