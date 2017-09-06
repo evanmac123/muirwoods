@@ -49,11 +49,6 @@ ga('send', 'pageview');
 	<?php foundationpress_call_bar(); ?>
 	<header class="site-header" role="banner">
 		<div class="site-title-bar show-for-small show-for-medium-up" >
-			<!--<div class="title-bar-left">
-				<span class="site-mobile-title title-bar-title">
-					<a href="<php echo esc_url( home_url( '/' ) ); ?>" rel="home"><php bloginfo( 'name' ); ?> </a>
-				</span>
-			</div>-->
 			<div class="title-bar-right">
 				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 			</div>
