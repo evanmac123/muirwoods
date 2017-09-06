@@ -107,9 +107,19 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 			'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
 			'fallback_cb'    => false,
 			'walker'         => new Foundationpress_Mobile_Walker(),
+            'reverse'        => true
 		));
 	}
 }
+
+function mw_reverse_nav_menu($menu, $args) {
+    if (isset($args->reverse) && $args->reverse) {
+        return array_reverse($menu);
+    }
+    return $menu;
+}
+
+add_filter('wp_nav_menu_objects', 'mw_reverse_nav_menu', 10, 2);
 
 /**
  * Add support for buttons in the top-bar menu:

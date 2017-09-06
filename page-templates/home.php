@@ -102,7 +102,7 @@ get_header(); ?>
 		</section>
 
 
-		<section class="full-width home__testimonials">
+		<section class="full-width home__testimonials hide-for-small-only">
 			<h3><?php  the_field('home-testimonial-header'); ?></h3>
 				<?php  the_field('home-testimonial-slider'); ?>
 
