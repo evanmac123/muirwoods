@@ -65,7 +65,7 @@ if ( ! function_exists( 'foundationpress_call_bar' ) ) {
 		wp_nav_menu( array(
 			'container'      => false,
 			'menu_class'     => 'dropdown menu call-bar',
-			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
 			'theme_location' => 'call-bar',
 			'depth'          => 3,
 			'fallback_cb'    => false,

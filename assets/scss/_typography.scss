@@ -1,13 +1,30 @@
 h1 {
   text-transform: uppercase;
+  font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
+h3, h5, h6 {
   color: $light-gray;
+  font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+}
+
+h2, h4 {
+    color: $primary-color;
+    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+}
+
+.home__split-title h3 {
+    color: $white;
+    font-size: 1.3rem;
+}
+
+.home__testimonials h3 {
+        color: $primary-color;
+        font-size: 2.3rem;
+}
+
+.home__links-title h4 {
+    color: $white;
 }
 
 .entry-title{
@@ -64,6 +81,10 @@ ul li {
   list-style-type: none;
 }
 
+article ul li {
+  list-style-type: circle;
+}
+
 ul li:before {
   color: $primary-color;
   float: left;
@@ -74,23 +95,23 @@ ul li:before {
 
 input::-webkit-input-placeholder {
   /* Chrome */
-  color: $white;
+  color: $medium-gray;
 }
 
 input:-ms-input-placeholder {
   /* IE 10+ */
-  color: $white;
+  color: $medium-gray;
 }
 
 input::-moz-placeholder {
   /* Firefox 19+ */
-  color: $white;
+  color: $medium-gray;
   opacity: 1;
 }
 
 input:-moz-placeholder {
   /* Firefox 4 - 18 */
-  color: $white;
+  color: $medium-gray;
   opacity: 1;
 }
 
@@ -164,4 +185,39 @@ input:-moz-placeholder {
     transition: all 0.2s;
     background-color:transparent;
   }
+}
+
+.home__slider h2.home-slider-heading {
+    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-size: 40px;
+    color: $primary-color;
+    text-align: left;
+    line-height: 1.15;
+}
+
+.home__slider p.home__slider-description {
+    font-size: 16px;
+}
+
+.home__slider h2.home-slider-heading-mobile {
+    font-family: 'Roboto Slab', Palatino, Palladio, Baskerville, Georgia, serif;
+    font-size: 20px;
+    color: $primary-color;
+    text-align: left;
+    line-height: 1.25;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+.home__slider p.home__slider-description-mobile {
+    font-size: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .home__split-column {
+        padding: 35px;
+    }
 }
