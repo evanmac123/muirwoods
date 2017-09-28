@@ -46,18 +46,20 @@ ga('send', 'pageview');
 
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
-	<?php foundationpress_call_bar(); ?>
-	<header class="site-header" role="banner">
-		<div class="site-title-bar show-for-small show-for-medium-up" >
-			<div class="title-bar-right">
-				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-			</div>
+	<?php foundationpress_call_bar();?>
+    <div id="mobile-call-bar" class="hide-for-large call-bar">
+        <?php foundationpress_mobile_call_bar(); ?>
+        <button id="mobile-open-button" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
+        <button id="mobile-close-button" class="close-button" aria-label="Close menu" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>">
+            <span>&times;</span>
+        </button>
+    </div>
+	<header class="site-header show-for-large" role="banner">
+		<div class="site-title-bar" >
+
 		<nav class="site-navigation top-bar" role="navigation">
 
-			<div class="top-bar-right">
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
+			<div class="top-bar-right show-for-large">
 				<?php foundationpress_top_bar_r(); ?>
 				<?php foundationpress_program_bar_r(); ?>
 			</div>
@@ -80,7 +82,7 @@ ga('send', 'pageview');
 	<section class="container">
         <div class="hide-for-large row">
             <div id="mobile-logo" class="column small-6 medium-4 small-centered">
-                <img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" /></a>
             </div>
         </div>
 		<?php do_action( 'foundationpress_after_header' );

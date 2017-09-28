@@ -25,11 +25,19 @@ $accordionmenu-arrow-size: 6px !default;
         top: 50%;
         margin-top: -1 * ($accordionmenu-arrow-size / 2);
         #{$global-right}: 1rem;
+        transform: rotate(-90deg);
       }
+        
+        &:hover {
+            &::after {
+                transform: rotate(-90deg);
+                transform-origin: 50% 50%;
+            }
+        }
     }
 
     .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
-      transform: rotate(180deg);
+      transform: rotate(0deg);
       transform-origin: 50% 50%;
     }
   }

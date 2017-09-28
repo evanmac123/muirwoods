@@ -60,6 +60,7 @@ $white-gray: #e4e4e4;
 $light-gray: #737373;
 $medium-gray: #4b4a4a;
 $dark-gray: #6A6A6A;
+$light-green: #F1F5EB; //light-green
 $black: #0a0a09;
 $white: #fefefe;
 $body-background: $white;
@@ -595,7 +596,7 @@ $titlebar-background: $light-gray;
 $titlebar-color: $body-font-color;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $body-font-color;
+$titlebar-icon-color: $white;
 $titlebar-icon-color-hover: $black;
 $titlebar-icon-spacing: 0.25rem;
 

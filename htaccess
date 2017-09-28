@@ -1,0 +1,38 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+# php -- BEGIN cPanel-generated handler, do not edit
+# NOTE this account's php is controlled via FPM and the vhost, this is a place holder.
+# Do not edit. This next line is to support the cPanel php wrapper (php_cli).
+# AddType application/x-httpd-ea-php70 .php .phtml
+# php -- END cPanel-generated handler, do not edit
+
+Redirect 301 /about/for-parents	/about-muir-wood/a-message-to-parents
+Redirect 301 /admissions/rehabilitation-financing	/admissions-info/financing
+Redirect 301 /admissions/contact-us	/contact
+Redirect 301 /contact-muir-wood-information-specialist	/contact
+Redirect 301 /staff/letter-from-our-founder	/credentialed-staff/letter-from-our-founder
+Redirect 301 /spring-2015-newsletter	/newsletter
+Redirect 301 /summer-2015-newsletter-2	/newsletter
+Redirect 301 /admissions/treat	/why-choose-muir-wood/treatment-comparison-guide-for-parents
+Redirect 301 /guides	/why-choose-muir-wood/treatment-comparison-guide-for-parents
+Redirect 301 /parents-guide-to-teen-treatment	/why-choose-muir-wood/treatment-comparison-guide-for-parents
+Redirect 301 /about/frequently-asked-questions	/faqs
+Redirect 301 /qa-tammy-gregg-young-m-ed-credentialed-teacher	/boys-residential-program/academic-excellence/
+Redirect 301 /video-library	/watch-our-videos
+Redirect 301 /why-muir-wood/12-reasons-muir-wood-gold-standard-adolescent-substance-abuse-mental-health-treament /why-choose-muir-wood/the-gold-standard-for-adolescent-treatment
+Redirect 301 /why-muir-wood/3-month-parent-coaching-aftercare-program	/why-choose-muir-wood/comprehensive-family-program
+Redirect 301 /admissions/intake-prescreening	/admissions-info
