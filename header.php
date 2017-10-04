@@ -71,7 +71,7 @@ ga('send', 'pageview');
 						if ( has_custom_logo() ) {
                             the_custom_logo();
                         } else { ?>
-                            <img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" />
+                            <img width="130" height="130" alt="The Muir Wood logo, a stylized tree" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo"/>
                         <?php } ?>
                     </a>
 				</div>
@@ -82,7 +82,7 @@ ga('send', 'pageview');
 	<section class="container">
         <div class="hide-for-large row">
             <div id="mobile-logo" class="column small-6 medium-4 small-centered">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" itemprop="logo" /></a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img width="130" height="130" src="http://www.muirwoodteen.com/wp-content/uploads/2017/07/cropped-logo-1-3.png" class="custom-logo" alt="Muir Wood Logo" /></a>
             </div>
         </div>
 		<?php do_action( 'foundationpress_after_header' );

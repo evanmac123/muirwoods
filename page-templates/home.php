@@ -5,11 +5,12 @@ Template Name: Home
 get_header(); ?>
 	<div class="home">
 		<section>
+            <h1 style="display:none;">Muir Wood Teen</h1>
 			<div class="home__slider hide-for-small-only">
 				<?php the_field("home-slider"); ?>
 			</div>
             <div class="home__slider show-for-small-only">
-                <img src="/wp-content/uploads/2017/09/Beard-Guy.jpg" />
+                <img src="/wp-content/uploads/2017/09/Beard-Guy.jpg" alt="Teen in treatment"/>
                 <h2 class="home-slider-heading-mobile">TRUSTED TREATMENT FOR TEEN MENTAL HEALTH, BEHAVIORAL, AND SUBSTANCE USE ISSUES.</h2>
                 <p class="home__slider-description-mobile" style="text-align: left;">Muir Wood is a world renowned northern California treatment center for teens struggling with mental health, behavioral, and substance abuse issues. We offer residential inpatient treatment for teen boys 12&ndash;17 in Sonoma County, and outpatient treatment for boys and girls 12&ndash;19 in Marin County. <a href="/about-muir-wood/"><strong>Read more&raquo;</strong></a></p>
                 <p class="align-center"><a class="button-white" href="/getting-started/"><strong>Getting Started</strong></a></p>
@@ -123,7 +124,7 @@ get_header(); ?>
 				<div class="large-4 column home__links-left">
 					<a href="<?php the_field('home-links-left-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
-						<img src="<?php the_field('home-links-left-icon');?>">
+						<img src="<?php the_field('home-links-left-icon');?>" alt="Icon of a family">
 						<div class="home__links-title">
 							<?php the_field("home-links-left-title"); ?>
 						</div>
@@ -137,7 +138,7 @@ get_header(); ?>
 				<div class="large-4 column home__links-center">
 					<a href="<?php the_field('home-links-center-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-center-img");?>')">
-						<img src="<?php the_field('home-links-center-icon');?>">
+						<img src="<?php the_field('home-links-center-icon');?>" alt="Book icon">
 						<div class="home__links-title">
 							<?php the_field("home-links-center-title"); ?>
 						</div>
@@ -151,7 +152,7 @@ get_header(); ?>
 				<div class="large-4 column home__links-right">
 					<a href="<?php the_field('home-links-right-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-right-img");?>')">
-						<img src="<?php the_field('home-links-right-icon');?>">
+						<img src="<?php the_field('home-links-right-icon');?>" alt="Male gender symbol (Mars)">
 						<div class="home__links-title">
 							<?php the_field("home-links-right-title"); ?>
 						</div>
