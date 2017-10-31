@@ -88,7 +88,7 @@ get_header(); ?>
 				<div class="home__insurance-button">
 					<?php the_field("home-insurance-button"); ?>
 				</div>
-				<img src="<?php the_field('home-insurance-logo');?>" />
+				<img src="<?php the_field('home-insurance-logo');?>" alt="Logos for Premera, Regence, and Anthem insurance" />
 				<div class="home__insurance-logo-description column large-10 small-centered">
 					<?php the_field('home-insurance-logo-description');?>
 				</div>
