@@ -216,8 +216,25 @@ input:-moz-placeholder {
     margin-right: 25px;
 }
 
+.home section.home__about {
+    padding-top: 2.0em;
+    padding-bottom: 2.0em;
+    
+    p {
+        text-align: left;
+    }
+}
+
+
+
 @media screen and (max-width: 39.9375em) {
     .home__split-column {
         padding: 35px;
+    }
+    
+    nav.position-top.is-open ~ .off-canvas-content {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
     }
 }

@@ -5,15 +5,25 @@ Template Name: Home
 get_header(); ?>
 	<div class="home">
 		<section>
+            <h1 style="display:none;">Muir Wood Teen</h1>
 			<div class="home__slider hide-for-small-only">
 				<?php the_field("home-slider"); ?>
 			</div>
             <div class="home__slider show-for-small-only">
-                <img src="/wp-content/uploads/2017/08/dragonfly.jpg" />
+                <img src="/wp-content/uploads/2017/09/Beard-Guy.jpg" alt="Teen in treatment"/>
                 <h2 class="home-slider-heading-mobile">TRUSTED TREATMENT FOR TEEN MENTAL HEALTH, BEHAVIORAL, AND SUBSTANCE USE ISSUES.</h2>
                 <p class="home__slider-description-mobile" style="text-align: left;">Muir Wood is a world renowned northern California treatment center for teens struggling with mental health, behavioral, and substance abuse issues. We offer residential inpatient treatment for teen boys 12&ndash;17 in Sonoma County, and outpatient treatment for boys and girls 12&ndash;19 in Marin County. <a href="/about-muir-wood/"><strong>Read more&raquo;</strong></a></p>
                 <p class="align-center"><a class="button-white" href="/getting-started/"><strong>Getting Started</strong></a></p>
             </div>
+		</section>
+        
+        <section class="home__about" style="background-image:url('<?php the_field("home-videos-background-img"); ?> ');">
+			<div class="main-wrap">
+				<div class="row column">
+				<h2> <?php the_field("home-about-header");  ?> </h2>
+					<?php the_field("home-about-text"); ?>
+				</div>
+			</div>
 		</section>
 
 		<section class="home__split">
@@ -44,20 +54,42 @@ get_header(); ?>
 				<p class="home__videos-description column large-10">
 					<?php the_field("home-videos-description"); ?> </p>
 				</div>
-					<div class="row">
-				<div class="large-6 column">
-					<?php the_field("home-videos-left-video"); ?>
-					<div class="home__videos-split-description">
-					<?php the_field("home-videos-left-description"); ?>
-					</div>
-				</div>
-				<div class="large-6 column">
-					<?php the_field("home-videos-right-video"); ?>
-					<div class="home__videos-split-description">
-					<?php the_field("home-videos-right-description"); ?>
-				</div>
-				</div>
-			</div>
+				<div class="row">
+                    <div class="large-6 column">
+                        <?php the_field("home-videos-one-video"); ?>
+                        <div class="home__videos-split-description">
+                           <?php the_field("home-videos-one-description"); ?>
+                        </div>
+                    </div>
+                    <div class="large-6 column">
+                        <?php the_field("home-videos-two-video"); ?>
+                        <div class="home__videos-split-description">
+                           <?php the_field("home-videos-two-description"); ?>
+                        </div>
+                    </div>
+			    </div>
+                
+                <?php if (get_field("home-videos-three-video") !== "") {
+                    $video_three_code = get_field('home-videos-three-video');
+                    $video_three_description = get_field('home-videos-three-description');
+                    $video_four_code = get_field('home-videos-four-video');
+                    $video_four_description = get_field('home-videos-four-description');
+                    echo "<div class='row'>
+                        <div class='large-6 column'>
+                        $video_three_code
+                        <div class='home__videos-split-description'>
+                        $video_three_description
+                        </div>
+                        </div>
+                        <div class='large-6 column'>
+                        $video_four_code
+                        <div class='home__videos-split-description'>
+                        $video_four_description
+                        </div>
+                        </div>
+                        </div>";
+                    }; ?>
+                
 				<div class="row">
 				<a class="button-green" href="<?php the_field("home-videos-button"); ?>">
 					<?php the_field("home-videos-button-text"); ?>
@@ -78,7 +110,7 @@ get_header(); ?>
 				<div class="home__insurance-button">
 					<?php the_field("home-insurance-button"); ?>
 				</div>
-				<img src="<?php the_field('home-insurance-logo');?>" />
+				<img src="<?php the_field('home-insurance-logo');?>" alt="Logos for Premera, Regence, and Anthem insurance" />
 				<div class="home__insurance-logo-description column large-10 small-centered">
 					<?php the_field('home-insurance-logo-description');?>
 				</div>
@@ -102,7 +134,7 @@ get_header(); ?>
 		</section>
 
 
-		<section class="full-width home__testimonials">
+		<section class="full-width home__testimonials hide-for-small-only">
 			<h3><?php  the_field('home-testimonial-header'); ?></h3>
 				<?php  the_field('home-testimonial-slider'); ?>
 
@@ -114,7 +146,7 @@ get_header(); ?>
 				<div class="large-4 column home__links-left">
 					<a href="<?php the_field('home-links-left-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-left-img");?>')">
-						<img src="<?php the_field('home-links-left-icon');?>">
+						<img src="<?php the_field('home-links-left-icon');?>" alt="Icon of a family">
 						<div class="home__links-title">
 							<?php the_field("home-links-left-title"); ?>
 						</div>
@@ -128,7 +160,7 @@ get_header(); ?>
 				<div class="large-4 column home__links-center">
 					<a href="<?php the_field('home-links-center-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-center-img");?>')">
-						<img src="<?php the_field('home-links-center-icon');?>">
+						<img src="<?php the_field('home-links-center-icon');?>" alt="Book icon">
 						<div class="home__links-title">
 							<?php the_field("home-links-center-title"); ?>
 						</div>
@@ -142,7 +174,7 @@ get_header(); ?>
 				<div class="large-4 column home__links-right">
 					<a href="<?php the_field('home-links-right-link');?>">
 					<div class="home__links-image" style="background-image:url('<?php  the_field("home-links-right-img");?>')">
-						<img src="<?php the_field('home-links-right-icon');?>">
+						<img src="<?php the_field('home-links-right-icon');?>" alt="Male gender symbol (Mars)">
 						<div class="home__links-title">
 							<?php the_field("home-links-right-title"); ?>
 						</div>

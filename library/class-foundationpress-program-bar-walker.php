@@ -146,7 +146,7 @@ if ( ! class_exists( 'Foundationpress_Program_Bar_Walker' ) ) :
 
      		$item_output = $args->before;
         if (0 === $depth ) {
-     		$item_output .= '<a'. $attributes . 'class="opener">';
+     		$item_output .= '<a'. $attributes . ' class="opener">';
        }
        else{
          	$item_output .= '<a'. $attributes .'>';

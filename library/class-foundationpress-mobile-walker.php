@@ -17,4 +17,5 @@ if ( ! class_exists( 'Foundationpress_Mobile_Walker' ) ) :
 			$output .= "\n$indent<ul class=\"vertical nested menu\">\n";
 		}
 	}
+
 endif;

@@ -26,8 +26,7 @@ if ( ! class_exists( 'Foundationpress_Sub_Menu_Left_Walker' ) ) :
 
 
 		 if ( ($item->menu_item_parent==0) && (strpos($class_names, 'current-menu-parent')) ) {
-			 $output.= '
-	<li>';
+			 $output.= '<li>';
 			 }
 			// Checks if the current element is in the current selection
 			if (strpos($class_names, 'current-menu-item')
