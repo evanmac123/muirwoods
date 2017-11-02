@@ -54,20 +54,42 @@ get_header(); ?>
 				<p class="home__videos-description column large-10">
 					<?php the_field("home-videos-description"); ?> </p>
 				</div>
-					<div class="row">
-				<div class="large-6 column">
-					<?php the_field("home-videos-left-video"); ?>
-					<div class="home__videos-split-description">
-					<?php the_field("home-videos-left-description"); ?>
-					</div>
-				</div>
-				<div class="large-6 column">
-					<?php the_field("home-videos-right-video"); ?>
-					<div class="home__videos-split-description">
-					<?php the_field("home-videos-right-description"); ?>
-				</div>
-				</div>
-			</div>
+				<div class="row">
+                    <div class="large-6 column">
+                        <?php the_field("home-videos-one-video"); ?>
+                        <div class="home__videos-split-description">
+                           <?php the_field("home-videos-one-description"); ?>
+                        </div>
+                    </div>
+                    <div class="large-6 column">
+                        <?php the_field("home-videos-two-video"); ?>
+                        <div class="home__videos-split-description">
+                           <?php the_field("home-videos-two-description"); ?>
+                        </div>
+                    </div>
+			    </div>
+                
+                <?php if (get_field("home-videos-three-video") !== "") {
+                    $video_three_code = get_field('home-videos-three-video');
+                    $video_three_description = get_field('home-videos-three-description');
+                    $video_four_code = get_field('home-videos-four-video');
+                    $video_four_description = get_field('home-videos-four-description');
+                    echo "<div class='row'>
+                        <div class='large-6 column'>
+                        $video_three_code
+                        <div class='home__videos-split-description'>
+                        $video_three_description
+                        </div>
+                        </div>
+                        <div class='large-6 column'>
+                        $video_four_code
+                        <div class='home__videos-split-description'>
+                        $video_four_description
+                        </div>
+                        </div>
+                        </div>";
+                    }; ?>
+                
 				<div class="row">
 				<a class="button-green" href="<?php the_field("home-videos-button"); ?>">
 					<?php the_field("home-videos-button-text"); ?>
