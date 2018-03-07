@@ -1,0 +1,92 @@
+/* ----------------------------------------------------------------------------
+
+  These styles were written as plain CSS because I didn't have access to the 
+  git repo or build files at the time. - MBH
+---------------------------------------------------------------------------- */
+
+/* Form Validation */
+
+.validate-help {
+  display: block;
+  font-style: italic;
+}
+.validate-help span {
+  color: #ffc63e;
+}
+
+.validate-message {
+  color: #ed0000;
+  display: block;
+  font-weight: bold;
+  padding: 1em 0 0 0;
+}
+.validate-white .validate-message {
+  color: #ffc63e;
+}
+
+.validate-me label {
+  font-weight: bold;
+}
+.validate-me label span {
+  color: #ffc63e;
+}
+
+.validate-me .error label {
+  color: #ed0000;
+}
+.validate-white .error label {
+  color: #ffc63e;
+}
+
+.validate-me .error input,
+.validate-me .error textarea,
+.validate-me .error select {
+  border: solid 1px #ed0000;
+}
+.validate-white .error input,
+.validate-white .error textarea,
+.validate-white .error select {
+  border: solid 1px #ffc63e;
+}
+
+.validate-me textarea {
+  height: 200px;
+}
+
+.footer .footer-form .validate-me select {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.validate-me input[type=submit] {
+  padding: .5em 1em;
+  border: solid 1px #4b4a4a;
+}
+
+::placeholder {
+  color: #ddd;
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  color: #ddd;
+  font-style: italic;
+}
+::-ms-input-placeholder {
+  color: #ddd;
+  font-style: italic;
+}
+:placeholder-shown {
+  color: #ddd;
+  font-style: italic;
+}
+
+@media screen and (min-width: 500px) {
+  .validate-me .one-half {
+    float: left;
+    width: 50%;
+  }
+  .validate-me .one-half-first {
+    padding-right: 1em;
+  }
+}
