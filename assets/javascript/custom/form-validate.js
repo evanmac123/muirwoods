@@ -1,8 +1,5 @@
 jQuery(document);
 
-// Hide honeypot fields
-$('.custom-validate-field').hide();
-
 // Form Validation
 // 1. Form tag must have class="validate-me"
 // 2. Required fields must be wrapped in a div with class="required"
@@ -53,23 +50,6 @@ $('.validate-me').on('submit', function() {
       $('html, body').animate({scrollTop: form.offset().top - 150}, 0);
       return false;
     }
-
-    // Passed validation. Check for spam
-    if ($('#contact:checked').length > 0) {
-      // hidden "I am not Human" field was checked. 
-      // Redirect to homepage without submitting to SalesForce
-      window.location.replace('/');
-      return false;
-    }
-    if ($('#age').val() !== '') {
-      // hidden honey pot field was filled in. 
-      // Redirect to homepage without submitting to SalesForce
-      window.location.replace('/');
-      return false;
-    }
-
-    // Passed spam check
-    return true;
 
   } catch (error) {
     console.log(error);
