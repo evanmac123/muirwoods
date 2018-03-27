@@ -59,9 +59,17 @@
   transform: none;
 }
 
+.g-recaptcha {
+  clear: left;
+  float: left;
+}
+
 .validate-me input[type=submit] {
   padding: .5em 1em;
   border: solid 1px #4b4a4a;
+  clear: left;
+  float: left;
+  margin-top: 1em;
 }
 
 ::placeholder {

@@ -8,6 +8,7 @@ $('.validate-me').on('submit', function() {
   var form = $(this);
   var missingFields = false;
   var invalidDates = false;
+  var missingCaptcha = false;
 
   try {
     form.find('.required').each(function() {
@@ -34,7 +35,12 @@ $('.validate-me').on('submit', function() {
 
     });
 
-    if (missingFields || invalidDates) {
+    // Check for recaptcha response
+    if ($('.g-recaptcha-response').val() === '') {
+      missingCaptcha = true;
+    }
+
+    if (missingFields || invalidDates || missingCaptcha) {
       var messages = [];
 
       if (missingFields) {
@@ -42,6 +48,9 @@ $('.validate-me').on('submit', function() {
       }
       if (invalidDates) {
         messages.push('Please enter valid dates: MM/DD/YYYY');
+      }
+      if (missingCaptcha) {
+        messages.push('Please enter the captcha');
       }
 
       form.find('.validate-message').html(messages.join('<br/>')).show();
