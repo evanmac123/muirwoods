@@ -17,12 +17,6 @@
 		<?php wp_head(); ?>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-
-    <!-- Recaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-     function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
-    </script>
 	</head>
 	<body <?php body_class(); ?>>
 

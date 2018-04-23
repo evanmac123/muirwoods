@@ -62,6 +62,27 @@ document.body.appendChild(kmscr);
 </script>
 <!-- End Keymetric Tracking Code -->
 
+<!-- Begin Custom KM Lead Source Tracking -->
+<script type="text/javascript">
+  // add ad source to hidden field
+  (function ($) {
+    // wait for Key Metrics code
+    $( window ).on( "load", function() {
+      var adSrc = km_GetTrackingURL('adsource');
+
+      // Ninja forms is not outputting custom field name. Have to target 
+      // auto-generated form names
+      // nf-field-214 is the lead_source field on the Footer Contact form
+      // nf-field-216 is the lead_source field on the Brochure form
+      // nf-field-218 is the lead_source field on the Insurance form
+      $('#nf-field-214, #nf-field-216, #nf-field-218').each( function() {
+        $(this).val(adSrc);
+      });
+    });
+  })(jQuery);
+</script> 
+<!-- End Custom KM Lead Source Tracking -->
+
 
 
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
