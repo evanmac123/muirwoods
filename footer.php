@@ -45,14 +45,6 @@
 
 <!-- Begin Keymetric Tracking Code -->
 <script type = 'text/javascript' >
-    function onKeyMetricComplete() {
-    if (window.location.pathname == "/thank-you/") {
-        km_LogData('101');
-    };
-    if (window.location.pathname == "/thank-submitting-insurance-information/") {
-        km_LogData('102');
-    };
-}
 var KmHost = (("https:" == document.location.protocol) ? "https://km14221" : "http://km14221");
 var kmscr = document.createElement('script');
 kmscr.type = 'text/javascript';
