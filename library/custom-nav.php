@@ -16,6 +16,7 @@ add_action( 'customize_register', 'wpt_register_theme_customizer' );
 // Add class to body to help w/ CSS
 add_filter( 'body_class', 'mobile_nav_class' );
 function mobile_nav_class( $classes ) {
-	return 	$classes[] = 'offcanvas';
+	$classes[] = 'offcanvas';
+	return 	$classes;
 }
 endif;
